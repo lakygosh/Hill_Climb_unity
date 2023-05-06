@@ -21,12 +21,10 @@ public class EnviromentGenerator : MonoBehaviour
     [SerializeField] private float _bottom = 10f;
 
     private Vector3 _lastLvlFragmentPos; //memorize last position and create realtive curve base on that position
-    private Vector3 _lastFuelPosition;
     private int i = 0;
 
     private void OnValidate()
     {
-        //_lastFuelPosition = FuelController.instance.transform.position;
         _spriteShapeController.spline.Clear();
 
        for(i = 0; i < _levelLength; i++)
@@ -54,7 +52,7 @@ public class EnviromentGenerator : MonoBehaviour
         while (j < _levelLength)
         {
             _lastLvlFragmentPos = transform.position + new Vector3(i * _xMultiplier, Mathf.PerlinNoise(0, i * _noiseStep) * _yMultiplier); //transform.position returns position of the object
-            _spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos); //Create point on terrain with index i and location _lastPos
+            _spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos); //Create point on terrain with index i and location _lastPos   
 
            // if (i != 0 && i != _levelLength - 1)
            //  {
@@ -79,10 +77,5 @@ public class EnviromentGenerator : MonoBehaviour
             //render map part
             MapRender();
         }
-    }
-
-    private void FuelGenerator(Vector3 fuelPositon) //ne radi
-    {
-        Instantiate(FuelController.instance.transform, fuelPositon, Quaternion.identity);
     }
 }

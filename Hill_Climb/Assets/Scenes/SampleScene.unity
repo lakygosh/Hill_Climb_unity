@@ -1385,6 +1385,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815767471}
   m_CullTransparentMesh: 1
+--- !u!4 &922463164 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
+  m_PrefabInstance: {fileID: 2273199972037173246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1230123194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3527,6 +3532,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fuel Canister
       objectReference: {fileID: 0}
+    - target: {fileID: 2622331391883249368, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1823948408}
+    - target: {fileID: 2622331391883249368, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
+      propertyPath: _fuelCanister
+      value: 
+      objectReference: {fileID: 922463164}
     - target: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
       propertyPath: m_RootOrder
       value: 10
