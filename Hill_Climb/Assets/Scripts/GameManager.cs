@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] private GameObject _gameOverCanvas;
+    [SerializeField] private GameObject _gamePauseCanvas;
     private void Awake()
     {
         if (instance == null)
@@ -16,6 +17,12 @@ public class GameManager : MonoBehaviour
         }
 
         Time.timeScale = 1.0f;
+    }
+
+    public void GamePaused()
+    {
+        _gamePauseCanvas.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void GameOver()
@@ -28,10 +35,21 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void ResumeGame()
+    {
+        _gamePauseCanvas.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
