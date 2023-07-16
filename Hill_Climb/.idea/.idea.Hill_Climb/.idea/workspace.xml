@@ -5,69 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3431f26d-6e07-4d35-88e1-ed8774531c77" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ComponentProperties.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ComponentProperties.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ComponentUpgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ComponentUpgrade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ReferenceCollection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ReferenceCollection.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ScriptUpgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ScriptUpgrade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/TextToTMP.Editor.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/TextToTMP.Editor.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/TextToTMPWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/TextToTMPWindow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/Utilities.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/Utilities.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/README.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/menu_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/menu_background.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IPCReceiver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IPCReceiver.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Background.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Background/Background_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Background/Background_1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Background/background_clean.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Background/background_clean.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/GAMEELEMENTS.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameHud.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameHud/PauseBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameHud/PauseBtn.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/MenuBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/MenuBtn.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/ResumeBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/ResumeBtn.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/terrain.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Backgorund.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Background/Backgorund.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Backgorund.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Background/Backgorund.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/FuelCanister.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/GAMEELEMENTS/FuelCanister.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/FuelCanister.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/GAMEELEMENTS/FuelCanister.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RestartBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/RestartBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RestartBtn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/RestartBtn.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/terrain-mars-surface.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-mars-surface.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/terrain-mars-surface.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-mars-surface.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/terrain-surface.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-surface.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/terrain-surface.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-surface.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/TransparentMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/TransparentMaterial.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -118,7 +57,7 @@
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../hillclimb2/Hill_Climb.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../HillClimbGame\Hill_Climb.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Gazi\Desktop\hillclimb2" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -178,7 +117,7 @@
       <workItem from="1684336905080" duration="618000" />
       <workItem from="1689422044332" duration="3644000" />
       <workItem from="1689529529554" duration="1910000" />
-      <workItem from="1689542833662" duration="1368000" />
+      <workItem from="1689542833662" duration="1956000" />
     </task>
     <servers />
   </component>
