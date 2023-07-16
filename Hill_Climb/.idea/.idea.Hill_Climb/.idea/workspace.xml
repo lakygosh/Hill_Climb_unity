@@ -5,7 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3431f26d-6e07-4d35-88e1-ed8774531c77" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ComponentProperties.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ComponentProperties.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ComponentUpgrade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ComponentUpgrade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ReferenceCollection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ReferenceCollection.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ScriptUpgrade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/ScriptUpgrade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/TextToTMP.Editor.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/TextToTMP.Editor.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/TextToTMPWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/TextToTMPWindow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/Utilities.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/Editor/Utilities.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/TextToTMP/README.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/menu_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/menu_background.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IPCReceiver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IPCReceiver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Background.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Background/Background_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Background/Background_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Background/background_clean.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Background/background_clean.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/GAMEELEMENTS.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameHud.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameHud/PauseBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameHud/PauseBtn.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/MenuBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/MenuBtn.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/ResumeBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/ResumeBtn.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/terrain.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Backgorund.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Background/Backgorund.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Backgorund.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Background/Backgorund.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/FuelCanister.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/GAMEELEMENTS/FuelCanister.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/FuelCanister.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/GAMEELEMENTS/FuelCanister.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RestartBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/RestartBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RestartBtn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/RestartBtn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/terrain-mars-surface.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-mars-surface.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/terrain-mars-surface.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-mars-surface.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/terrain-surface.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-surface.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/terrain-surface.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-surface.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +80,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/27586baf39bf4babbfd8a2caabe8e22846ac00/86/a580fe75/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61c05f8d81804e929ff4198c5bcc7a6216e400/8b/e76eb27a/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClientNetworkTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectFuel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.5/Runtime/Behaviours/CinemachineVirtualCamera.cs" root0="SKIP_HIGHLIGHTING" />
@@ -25,36 +88,37 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRegistry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/AssertionFailureOnOutputVertexCount.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2PjhfGXlJbdhWOvp5fWtsAY6NZt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Menu&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Merging main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Gazi\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Gazi\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Gazi\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Gazi\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Gazi\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Gazi\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/hillclimb2/Hill_Climb.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../hillclimb2/Hill_Climb.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Gazi\Desktop\hillclimb2" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -62,7 +126,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Program Files\Unity\Hub\Editor\2022.2.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Program Files\Unity\Hill_Climb_unity\Hill_Climb&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Program Files\Unity\Hill_Climb_unity\Hill_Climb" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -70,7 +134,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Program Files\Unity\Hub\Editor\2022.2.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\Program Files\Unity\Hill_Climb_unity\Hill_Climb&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Program Files\Unity\Hill_Climb_unity\Hill_Climb" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -114,12 +178,14 @@
       <workItem from="1684336905080" duration="618000" />
       <workItem from="1689422044332" duration="3644000" />
       <workItem from="1689529529554" duration="1910000" />
+      <workItem from="1689542833662" duration="1368000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
