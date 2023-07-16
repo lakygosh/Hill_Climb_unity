@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,7 +27,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void GameOver()
-    { 
+    {
+        //Time.timeScale = 0.5f;
+        Thread.Sleep(5000);
         _gameOverCanvas.SetActive(true);
         Time.timeScale = 0f;
     }
