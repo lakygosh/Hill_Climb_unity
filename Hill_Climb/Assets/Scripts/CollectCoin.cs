@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Car;
 using UnityEngine;
 
 public class CollectCoin : MonoBehaviour
@@ -7,7 +6,7 @@ public class CollectCoin : MonoBehaviour
 	public static CollectCoin instance;
 
 	[SerializeField] private Transform _coin;
-    [SerializeField] private Player _player;
+    [SerializeField] private Player player;
 
     private Vector3 _lastCoinPosition;
 
@@ -39,7 +38,7 @@ public class CollectCoin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(_lastCoinPosition, _player.transform.position) <= 100f)
+        if (Vector3.Distance(_lastCoinPosition, player.transform.position) <= 100f)
         {
             _lastCoinPosition = CoinGenerator(_lastCoinPosition + Vector3.right * 600f);
         }

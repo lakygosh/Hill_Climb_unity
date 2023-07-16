@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
+using Car;
 
 [ExecuteInEditMode]
 public class EnviromentGenerator : MonoBehaviour
@@ -57,8 +58,8 @@ public class EnviromentGenerator : MonoBehaviour
            // if (i != 0 && i != _levelLength - 1)
            //  {
                 _spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous); //Prevents spiky terrain
-                _spriteShapeController.spline.SetLeftTangent(i, Vector3.left * _xMultiplier * _curveSmoothness);
-                _spriteShapeController.spline.SetRightTangent(i, Vector3.right * _xMultiplier * _curveSmoothness);//Left and right tangent through the spike of the hill, basicly streching the terrain and making nice curve
+                _spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (_xMultiplier * _curveSmoothness));
+                _spriteShapeController.spline.SetRightTangent(i, Vector3.right * (_xMultiplier * _curveSmoothness));//Left and right tangent through the spike of the hill, basicly streching the terrain and making nice curve
            // }
             i++;
             j++;
