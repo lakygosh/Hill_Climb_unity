@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("SinglePlayer");
     }
+    
     public void PlayMultiPlayer () 
     {
         SceneManager.LoadScene("MultiplayerRoom");
@@ -19,5 +21,13 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     { 
         Application.Quit();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Quit();
+        }
     }
 }
