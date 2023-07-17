@@ -8,9 +8,11 @@ using UnityEngine.SceneManagement;
 
 namespace Car
 {
-    public class Player : NetworkBehaviour
+    public class Player : MonoBehaviour
     {
-        
+        private String _username;
+        private String _password;
+        private bool _join = false;
         [SerializeField] private Rigidbody2D _frontTireRB;
         [SerializeField] private Rigidbody2D _backTireRB;
         [SerializeField] private Rigidbody2D _carRB;
@@ -22,19 +24,8 @@ namespace Car
 
         private float _moveInput;
 
-        public override void OnNetworkSpawn()
-        {
-            _playerCamera = Instantiate(playerCameraPrefab);
-            _playerCamera.Follow = this.transform;
-            _playerCamera.gameObject.SetActive(true);
-        }
-
         private void Update()
         {
-            if (!IsOwner)
-            {
-                return;
-            }
             _moveInput = Input.GetAxis("Horizontal");
         }
 
