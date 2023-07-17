@@ -1,0 +1,54 @@
+{
+    "name": "CarActions",
+    "maps": [
+        {
+            "name": "Car",
+            "id": "bc1c0db3-beca-4666-95fe-ddcb3e3bc820",
+            "actions": [
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "3f272d45-c126-47fa-bde6-83cc9bcee66c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Join",
+                    "type": "Button",
+                    "id": "ceb04b6c-7206-4f54-8e2b-cf8ce996ab10",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "95b1ea1b-de53-4801-9430-8c961e89f082",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a88f2123-5f1f-459a-9239-7e3cd889ec0b",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Join",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

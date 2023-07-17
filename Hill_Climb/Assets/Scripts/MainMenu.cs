@@ -8,10 +8,15 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void PlaySinglePlayer () 
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("SinglePlayer");
+    }
+    public void PlayMultiPlayer () 
+    {
+        SceneManager.LoadScene("MultiplayerRoom");
+        
     }
 
-    public void Qiut()
+    public void Quit()
     { 
         Application.Quit();
     }
