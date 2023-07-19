@@ -6,14 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="3431f26d-6e07-4d35-88e1-ed8774531c77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LocalMultiPlayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LocalMultiPlayer.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/TransparentMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/TransparentMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EscapeMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EscapeMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SinglePlayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SinglePlayer.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackgroundController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnviromentGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnviromentGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EscapeMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EscapeMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerRoom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Background/Backgorund.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Background/Backgorund.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/GAMEELEMENTS/FuelCanister.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/GAMEELEMENTS/FuelCanister.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/RestartBtn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/InGameMenu/RestartBtn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-mars-surface.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-mars-surface.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-surface.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/terrain/terrain-surface.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +139,9 @@
       <workItem from="1689569017127" duration="310000" />
       <workItem from="1689570943901" duration="3227000" />
       <workItem from="1689615534581" duration="3768000" />
+      <workItem from="1689687273798" duration="5818000" />
+      <workItem from="1689757502405" duration="1111000" />
+      <workItem from="1689785863041" duration="2415000" />
     </task>
     <servers />
   </component>

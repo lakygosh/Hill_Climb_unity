@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +5,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private bool _escapeMenuOn = false;
+    public static bool _escapeMenuOn = false;
+
+    public static bool EscapeMenuOn
+    {
+        get => _escapeMenuOn;
+        set => _escapeMenuOn = value;
+    }
 
     [SerializeField] private GameObject _gameOverCanvas;
     [SerializeField] private GameObject _gamePauseCanvas;

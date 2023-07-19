@@ -45,8 +45,8 @@ public class BackgroundController : MonoBehaviour
     {
         Instantiate(_backgroundFragment, backgroundPositon, Quaternion.identity);
         _backgroundFragment.transform.localScale = new Vector3(_backgroundFragment.transform.localScale.x * (-1), 
-                                                               _backgroundFragment.transform.localScale.y, 
-                                                               _backgroundFragment.transform.localScale.z);
+            _backgroundFragment.transform.localScale.y, 
+            _backgroundFragment.transform.localScale.z);
         return backgroundPositon;
     }
 

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +5,12 @@ public class EscapeMenu : MonoBehaviour
 {
     public void Continue ()
     {
-        SceneManager.UnloadSceneAsync("EscapeMenu");
+        if (GameManager._escapeMenuOn)
+        {
+            SceneManager.UnloadSceneAsync("EscapeMenu");
+            Time.timeScale = 1;
+            GameManager._escapeMenuOn = false;
+        }
     }
     
     public void Options () 
