@@ -5,28 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3431f26d-6e07-4d35-88e1-ed8774531c77" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/CarActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/CarActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/LOCAL VEHICLE.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/LOCAL VEHICLE.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/VEHICLE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/VEHICLE.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Virtual Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Virtual Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LocalMultiPlayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LocalMultiPlayer.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/SinglePlayerVehicle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/SinglePlayerVehicle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SinglePlayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SinglePlayer.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IPCReceiver.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IPCReceiver.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerRoom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Transparency.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Transparency.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +134,7 @@
       <workItem from="1689757502405" duration="1111000" />
       <workItem from="1689785863041" duration="13450000" />
       <workItem from="1689858323668" duration="19255000" />
+      <workItem from="1689883861660" duration="617000" />
     </task>
     <servers />
   </component>
