@@ -6,49 +6,63 @@
             "id": "bc1c0db3-beca-4666-95fe-ddcb3e3bc820",
             "actions": [
                 {
-                    "name": "Start",
+                    "name": "Drive",
                     "type": "Button",
                     "id": "3f272d45-c126-47fa-bde6-83cc9bcee66c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Join",
-                    "type": "Button",
-                    "id": "ceb04b6c-7206-4f54-8e2b-cf8ce996ab10",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "95b1ea1b-de53-4801-9430-8c961e89f082",
+                    "id": "8cb5ee68-2113-4e9d-97c4-a1edd2bfffd6",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Start",
+                    "groups": "Player1",
+                    "action": "Drive",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "a88f2123-5f1f-459a-9239-7e3cd889ec0b",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
+                    "id": "125b1ef2-7629-4eb2-8c01-9ea6984c50a7",
+                    "path": "<Keyboard>/w",
+                    "interactions": "Hold",
                     "processors": "",
-                    "groups": "",
-                    "action": "Join",
+                    "groups": "Player2",
+                    "action": "Drive",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Player1",
+            "bindingGroup": "Player1",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Player2",
+            "bindingGroup": "Player2",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }

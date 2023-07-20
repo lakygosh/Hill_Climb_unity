@@ -382,12 +382,10 @@ GameObject:
   - component: {fileID: 2345287996989664633}
   - component: {fileID: 5757811723105884795}
   - component: {fileID: 1939060366973463915}
-  - component: {fileID: -3564911497432736925}
-  - component: {fileID: 1041507953366969345}
-  - component: {fileID: 9203681870529713614}
-  - component: {fileID: 5577609911715025829}
+  - component: {fileID: 1601818660280844808}
+  - component: {fileID: -7580855990828246203}
   m_Layer: 3
-  m_Name: VEHICLE
+  m_Name: SinglePlayerVehicle
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -401,7 +399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6236308710344641297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 10, z: -15}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -488,7 +486,7 @@ WheelJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
---- !u!114 &-3564911497432736925
+--- !u!114 &1601818660280844808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -497,16 +495,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6236308710344641297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a8e883b5bf64f09b721dfaf039963cb, type: 3}
+  m_Script: {fileID: 11500000, guid: c3ee809c6b378ca4ba6ab5e30f9fa52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _frontTireRB: {fileID: 5768590451954010571}
   _backTireRB: {fileID: 1284177254370009423}
   _carRB: {fileID: 2345287996989664633}
-  _speed: 500
+  _speed: 700
   _rotationSpeed: 300
   playerCameraPrefab: {fileID: 4997914384669301539, guid: 3de897d88516a594396911d3b51dbf3b, type: 3}
---- !u!114 &1041507953366969345
+--- !u!114 &-7580855990828246203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -521,45 +519,7 @@ MonoBehaviour:
   GlobalObjectIdHash: 951099334
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
---- !u!114 &9203681870529713614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6236308710344641297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c37947ecea14fd3bcda762589e88ffe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 0
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 0
-  SyncScaleY: 0
-  SyncScaleZ: 0
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  InLocalSpace: 0
-  Interpolate: 1
---- !u!114 &5577609911715025829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6236308710344641297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d7c879794dfda4687da0e400131852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  AutoObjectParentSync: 0
 --- !u!1 &6417434749713109527
 GameObject:
   m_ObjectHideFlags: 0

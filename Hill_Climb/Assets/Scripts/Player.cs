@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace Car
@@ -12,21 +13,19 @@ namespace Car
     {
         private String _username;
         private String _password;
-        private bool _join = false;
         [SerializeField] private Rigidbody2D _frontTireRB;
         [SerializeField] private Rigidbody2D _backTireRB;
         [SerializeField] private Rigidbody2D _carRB;
+       
         [SerializeField] private float _speed = 150f;
         [SerializeField] private float _rotationSpeed = 300f;
 
-        public CinemachineVirtualCamera playerCameraPrefab;
-        private CinemachineVirtualCamera _playerCamera;
 
         private float _moveInput;
 
-        private void Update()
+        public void Move(InputAction.CallbackContext context)
         {
-            _moveInput = Input.GetAxis("Horizontal");
+            _moveInput = -context.ReadValue<float>();
         }
 
         private void FixedUpdate()
@@ -34,8 +33,9 @@ namespace Car
             _frontTireRB.AddTorque(_moveInput * _speed * Time.fixedDeltaTime);
             _backTireRB.AddTorque(_moveInput * _speed * Time.fixedDeltaTime);
             _carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime);
+            
         }
-        
+
         public Vector3 GetPosition() 
         {
 
