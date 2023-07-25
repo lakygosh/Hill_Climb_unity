@@ -4,6 +4,7 @@ using UnityEngine;
 public class CollectFuel : MonoBehaviour
 {
     public static CollectFuel instance;
+    public EnviromentGenerator enviromentGenerator = new EnviromentGenerator();
 
     [SerializeField] private Transform _fuelCanister;
     [SerializeField] private Player _player;
@@ -39,11 +40,11 @@ public class CollectFuel : MonoBehaviour
     {
         if (Vector3.Distance(_lastFuelPosition, _player.transform.position) <= 100f)
         {
-            _lastFuelPosition = FuelGenerator(_lastFuelPosition + Vector3.right * 600f);
+            _lastFuelPosition = FuelGenerator(_lastFuelPosition + Vector3.right * 600f);//+ Vector3.up * (enviromentGenerator.transform.position.y));
         }
     }
 
-    public Vector3 FuelGenerator(Vector3 fuelPositon) //ne radi
+    public Vector3 FuelGenerator(Vector3 fuelPositon)
     {
         Instantiate(_fuelCanister, fuelPositon, Quaternion.identity);
         return fuelPositon;
