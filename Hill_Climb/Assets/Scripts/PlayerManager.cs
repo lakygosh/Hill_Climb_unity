@@ -2,24 +2,42 @@ using System.Collections.Generic;
 using Car;
 using UnityEngine;
 using Cinemachine;
+using TMPro;
 using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
-    private List<PlayerInput> players = new List<PlayerInput>();
+    //private List<PlayerInput> playerInputs = new List<PlayerInput>();
+    private List<Player> players = null;
     [SerializeField]
-    private List<Transform> startingPoints;
-    [SerializeField]
-    private List<LayerMask> playerLayers;
+    private Player selectedPlayer;
+    //[SerializeField]
+    //private List<Transform> startingPoints;
+    //[SerializeField]
+    //private List<LayerMask> playerLayers;
 
-    private PlayerInputManager playerInputManager;
+    [SerializeField] private TextMeshProUGUI welcomeMessage;
+
+    //private PlayerInputManager playerInputManager;
 
     private void Awake()
     {
-        playerInputManager = FindObjectOfType<PlayerInputManager>();
+        PlayersLoader.LoadAllPlayers(ref players);
+        if (players== null)
+        {
+            players = new List<Player>();
+        }
+        
+        PlayersLoader.LoadSelected(ref players, ref selectedPlayer);
+        if (selectedPlayer == null)
+        {
+            selectedPlayer = new Player();
+        }
+        welcomeMessage.text = "Welcome " + selectedPlayer.Name +"!";
+        //playerInputManager = FindObjectOfType<PlayerInputManager>();
     }
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         playerInputManager.onPlayerJoined += AddPlayer;
     }
@@ -31,7 +49,7 @@ public class PlayerManager : MonoBehaviour
 
     public void AddPlayer(PlayerInput player)
     {
-        players.Add(player);
+        playerInputs.Add(player);
 
-    }
+    }*/
 }
