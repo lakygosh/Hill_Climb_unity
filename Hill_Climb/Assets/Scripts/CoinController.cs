@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Car;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,9 +10,9 @@ public class CoinController : MonoBehaviour
 {
 
 	public static CoinController instance;
-	
+	[SerializeField]
+	private Player player;
 	[SerializeField] private Image _coinImage;
-	[SerializeField] private float currCoinNumber;
 	[SerializeField] private TextMeshProUGUI _coinText;
 
 
@@ -21,6 +22,8 @@ public class CoinController : MonoBehaviour
         {
             instance = this;   
         }
+        _coinText.text = player.playerData.Coins.ToString();
+
     }
 
     // Start is called before the first frame update
@@ -37,7 +40,8 @@ public class CoinController : MonoBehaviour
 
 	public void AddCoins() 
 	{
-		currCoinNumber = currCoinNumber + 100;
-		_coinText.text = currCoinNumber.ToString();
+		player.playerData.Coins += 100;
+		PlayersLoader.updatePlayerData(player);
+		_coinText.text = player.playerData.Coins.ToString();
 	}
 }

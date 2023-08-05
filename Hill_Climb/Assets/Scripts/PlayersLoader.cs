@@ -3,19 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 using Car;
+using DefaultNamespace;
 using Pendulum_v3FullApp.Base;
 using UnityEngine;
 
 public class PlayersLoader : MonoBehaviour
 {
-    public static void LoadAllPlayers(ref List<Player> players)
+    public static void LoadAllPlayers(ref List<PlayerDTO> playerDTOs)
     {
         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         if (!path.EndsWith("\\")) path += "\\";
         path += "Pendulum_v3FullApp\\";
-        XmlSerializer serializer = new XmlSerializer(typeof(List<User>));
+        XmlSerializer serializer = new XmlSerializer(typeof(List<PlayerDTO>));
 
         try
         {
@@ -28,7 +30,7 @@ public class PlayersLoader : MonoBehaviour
                 }
 
                 File.Copy(path + "HCRPlayers.xml", path + "HCRPlayers_Backup.xml");
-                players = (List<Player>)serializer.Deserialize(reader);
+                playerDTOs = (List<PlayerDTO>)serializer.Deserialize(reader);
                 reader.Close();
             }
             else
@@ -51,43 +53,8 @@ public class PlayersLoader : MonoBehaviour
 
     }
     
-    public static void StoreAllPlayers(List<Player> players)
-    {
-        XmlSerializer XMLwriter = new XmlSerializer(typeof(List<Player>));
-
-        string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        if (!path.EndsWith("\\")) path += "\\";
-        path += "Pendulum_v3FullApp\\";
-        System.IO.Directory.CreateDirectory(path);
-        StreamWriter XMLfile = new StreamWriter(path + "HCRPlayers.xml");
-
-        try
-        {
-            if (players != null)
-            {
-                XMLwriter.Serialize(XMLfile, players);
-                XMLfile.Close();
-            }
-            else
-            {
-                XMLfile.Close();
-                File.Delete(path + "HCRPlayers.xml");
-            }
-        }
-        catch (Exception ex)
-        {
-            if (XMLfile != null)
-            {
-                XMLfile.Close();
-            }
-        }
-        finally
-        {
-            XMLfile.Close();
-        }
-    }
-
-    public static void LoadSelected(ref List<Player> players, ref Player selectedPlayer)
+    
+    public static void LoadSelected(ref List<PlayerDTO> playerDTOs, ref Player selectedPlayer)
     {
 
         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -104,30 +71,24 @@ public class PlayersLoader : MonoBehaviour
 
                 if(selectedUser!=null)
                 {
-                    if (players != null)
+                    if (playerDTOs != null)
                     {
-                        Player tempPlayer = players.Find(player => player.Id == selectedUser.Id);
+                        PlayerDTO tempPlayer = playerDTOs.Find(player => player.Id == selectedUser.Id);
                         if(tempPlayer!=null)
                         {
-                            selectedPlayer = tempPlayer;
+                            selectedPlayer.LoadPlayerData(tempPlayer);
                         }
                         else
                         {
-                            selectedPlayer.Name = selectedUser.Name;
-                            selectedPlayer.Surname = selectedUser.Surname;
-                            selectedPlayer.Id = selectedUser.Id;
-                            selectedPlayer.Coins = 0;
-                            selectedPlayer.Score = 0;
+                            selectedPlayer.LoadPlayerData(new PlayerDTO(selectedUser.Name, selectedUser.Surname, selectedUser.Id));
+                            AddPlayer(selectedPlayer, ref playerDTOs);
                         }
                         
                     }
                     else
                     {
-                        selectedPlayer.Name = selectedUser.Name;
-                        selectedPlayer.Surname = selectedUser.Surname;
-                        selectedPlayer.Id = selectedUser.Id;
-                        selectedPlayer.Coins = 0;
-                        selectedPlayer.Score = 0;
+                        selectedPlayer.LoadPlayerData(new PlayerDTO(selectedUser.Name, selectedUser.Surname, selectedUser.Id));
+                        AddPlayer(selectedPlayer, ref playerDTOs);
                     }
 
                    
@@ -152,6 +113,63 @@ public class PlayersLoader : MonoBehaviour
         catch (Exception ex)
         {
             throw ex;
+        }
+        
+    }
+    
+    public static void AddPlayer(Player player, ref List<PlayerDTO> players)
+    {
+        XmlSerializer XMLwriter = new XmlSerializer(typeof(List<PlayerDTO>));
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        if (!path.EndsWith("\\")) path += "\\";
+        path += "Pendulum_v3FullApp\\";
+        System.IO.Directory.CreateDirectory(path);
+        StreamWriter xmlFile = new StreamWriter(path + "HCRPlayers.xml");
+        
+        try
+        {
+            if (player != null)
+            {
+                players.Add(player.playerData);
+                XMLwriter.Serialize(xmlFile, players);
+                xmlFile.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            if (xmlFile != null)
+            {
+                xmlFile.Close();
+            }
+        }
+        finally
+        {
+            xmlFile.Close();
+        }
+    }
+
+    public static void updatePlayerData(Player player)
+    {
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        if (!path.EndsWith("\\")) path += "\\";
+        path += "Pendulum_v3FullApp\\";
+        XDocument doc = XDocument.Load(path + "HCRPlayers.xml");
+
+        try
+        {
+            XElement coinsElement = doc.Root.Elements("PlayerDTO").FirstOrDefault(e=>e.Element("UserId").Value == player.playerData.Id.ToString()).Element("Coins");
+
+            coinsElement.Value = player.playerData.Coins.ToString();
+        }
+        catch (Exception ex)
+        {
+            {
+                doc.Save(path + "HCRPlayers.xml");
+            }
+        }
+        finally
+        {               
+            doc.Save(path + "HCRPlayers.xml");
         }
         
     }

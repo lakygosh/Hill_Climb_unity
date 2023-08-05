@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using Cinemachine;
+using DefaultNamespace;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,19 +11,9 @@ using UnityEngine.SceneManagement;
 
 namespace Car
 {
-    [XmlRoot("Player")]
     public class Player : MonoBehaviour
     {
-        [XmlElement("UserName")]
-        public String Name{ get; set; } = "";
-        [XmlElement("UserSurname")]
-        public String Surname{ get; set; } = "";
-        [XmlElement("UserId")]
-        public int Id{ get; set; }
-        [XmlElement("Coins")]
-        public float Coins{ get; set; }
-        [XmlElement("Score")]
-        public float Score{ get; set; }
+        public PlayerDTO playerData;
         
         [SerializeField] private Rigidbody2D _frontTireRB;
         [SerializeField] private Rigidbody2D _backTireRB;
@@ -30,9 +21,8 @@ namespace Car
        
         [SerializeField] private float _speed = 150f;
         [SerializeField] private float _rotationSpeed = 300f;
-
-
         private float _moveInput;
+        
 
         public void Move(InputAction.CallbackContext context)
         {
@@ -52,6 +42,11 @@ namespace Car
 
                 return transform.position;
 
+        }
+        
+        public void LoadPlayerData(PlayerDTO data)
+        {
+            playerData = new PlayerDTO(data.Name,data.Surname,data.Id,data.Coins,data.BestScore);
         }
     }
 }

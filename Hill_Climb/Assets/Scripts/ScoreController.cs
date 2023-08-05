@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DisplayDistanceTxt : MonoBehaviour
+public class ScoreController : MonoBehaviour
 {
 
     [SerializeField] private TextMeshProUGUI _distanceText;
