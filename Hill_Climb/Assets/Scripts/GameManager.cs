@@ -1,4 +1,5 @@
 using System.Threading;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,11 +34,11 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        //Time.timeScale = 0.5f;
-        Thread.Sleep(5000);
+        TextMeshProUGUI score = _gameOverCanvas.GetComponentInChildren<TextMeshProUGUI>();
+        Debug.Log(score);
+        ScoreController.instance.saveScore(ref score);
         _gameOverCanvas.SetActive(true);
         Time.timeScale = 0f;
-        ScoreController.instance.newBestScore();
     }
     
     // Start is called before the first frame update

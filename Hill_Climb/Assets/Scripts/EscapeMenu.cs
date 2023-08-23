@@ -33,4 +33,9 @@ public class EscapeMenu : MonoBehaviour
     {
         Continue();
     }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("SinglePlayer");
+    }
 }

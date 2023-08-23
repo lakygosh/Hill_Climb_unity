@@ -100,7 +100,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
     
-    public static IEnumerator SaveBestScore(Player player)
+    public static IEnumerator SaveScore(Player player)
     {
         string jsonData = JsonConvert.SerializeObject(player.playerData);
         byte[] data = Encoding.UTF8.GetBytes(jsonData);

@@ -13,6 +13,8 @@ public class FuelController : MonoBehaviour
     [SerializeField, Range(0.1f, 5f)] private float _fuelDrainSpeed = 1f;
     [SerializeField] private float _maxFuelAmount = 100f;
     [SerializeField] private Gradient _fuelGradient;
+    
+    private bool called = false;
 
     private float _currentFuelAmount;
 
@@ -43,7 +45,11 @@ public class FuelController : MonoBehaviour
 
         if (_currentFuelAmount <= 0f)
         {
-            GameManager.instance.GameOver();
+            if (!called)
+            {
+                GameManager.instance.GameOver();
+                called = true;
+            }
         }
     }
 

@@ -11,7 +11,7 @@ public class ScoreController : MonoBehaviour
     [SerializeField] private Transform _playerTrans;
     [SerializeField] private Player player;
     public static ScoreController instance;
-    Vector2 distance;
+    public Vector2 distance;
     private void Awake()
     {
         if (instance == null) 
@@ -42,14 +42,21 @@ public class ScoreController : MonoBehaviour
     }
     
     
-    public void newBestScore()
+    public void saveScore(ref TextMeshProUGUI score)
     {
         if(distance.x>player.playerData.BestScore)
         {
             player.playerData.BestScore = distance.x;
             Debug.Log(player.playerData.BestScore);
-            StartCoroutine(PlayerManager.SaveBestScore(player));
+            StartCoroutine(PlayerManager.SaveScore(player));
+            score.color = Color.green;
+            score.text = "New Best Score: " + distance.x.ToString("F0") + " m";
         }
+        else
+        {
+            score.text = "Score: " + instance.distance.x.ToString("F0") + " m";
+        }
+
     }
     
     
