@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         Thread.Sleep(5000);
         _gameOverCanvas.SetActive(true);
         Time.timeScale = 0f;
+        ScoreController.instance.newBestScore();
     }
     
     // Start is called before the first frame update

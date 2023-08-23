@@ -48,5 +48,6 @@ namespace Car
         {
             playerData = new PlayerDTO(data.Name,data.Surname,data.Id,data.Coins,data.BestScore);
         }
+        
     }
 }

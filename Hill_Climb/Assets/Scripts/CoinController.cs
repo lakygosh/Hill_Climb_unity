@@ -8,7 +8,6 @@ using TMPro;
 
 public class CoinController : MonoBehaviour
 {
-
 	public static CoinController instance;
 	[SerializeField]
 	private Player player;
@@ -41,7 +40,7 @@ public class CoinController : MonoBehaviour
 	public void AddCoins() 
 	{
 		player.playerData.Coins += 100;
-		PlayersLoader.updatePlayerData(player);
+		StartCoroutine(PlayerManager.SaveCoins(player));
 		_coinText.text = player.playerData.Coins.ToString();
 	}
 }
