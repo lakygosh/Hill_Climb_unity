@@ -13,8 +13,10 @@ public class CoinController : MonoBehaviour
 	[SerializeField] private Image _coinImage;
 	[SerializeField] private TextMeshProUGUI _coinText;
 
+    
 
-	private void Awake()
+
+    private void Awake()
     {
         if (instance == null) 
         {
@@ -43,4 +45,6 @@ public class CoinController : MonoBehaviour
 		StartCoroutine(PlayerManager.SaveCoins(PlayerManager.GetSelectedPlayer()));
 		_coinText.text = PlayerManager.GetSelectedPlayer().playerData.Coins.ToString();
 	}
+
+   
 }
