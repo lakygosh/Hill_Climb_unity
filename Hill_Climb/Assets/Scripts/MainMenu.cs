@@ -3,10 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private VideoPlayer videoPlayer;
+    
+private void Awake()
+    {
+        if (!SceneManager.GetSceneByName("Background").isLoaded)
+        {
+            SceneManager.LoadScene("Background", LoadSceneMode.Additive);
+        }
+    }
+    
     public void PlaySinglePlayer () 
     {
         SceneManager.LoadScene("SinglePlayer");
@@ -17,10 +28,17 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("MultiplayerRoom");
         
     }
-
+    
     public void Quit()
     { 
         Application.Quit();
+    }
+    
+    public static void Leaderboard()
+    {
+        SceneManager.LoadScene("Leaderboard", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("MainMenu");
+        
     }
 
     private void Update()
@@ -29,5 +47,10 @@ public class MainMenu : MonoBehaviour
         {
             Quit();
         }
+    }
+    
+    public void Debug()
+    {
+        UnityEngine.Debug.Log("Debug");
     }
 }

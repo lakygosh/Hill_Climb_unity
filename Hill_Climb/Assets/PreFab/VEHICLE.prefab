@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7633502057614003663}
   - component: {fileID: 5768590451954010571}
   - component: {fileID: 1537568420275101941}
-  - component: {fileID: 800856710461009862}
   m_Layer: 3
   m_Name: FrontTire
   m_TagString: Player
@@ -149,19 +148,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.505
---- !u!114 &800856710461009862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773868305909398166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49fff9ca0e2173b43a95802ace804c04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: 4ccc47fc96a5419438ef267849ce3db4, type: 2}
 --- !u!1 &2925029781667470452
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +159,6 @@ GameObject:
   - component: {fileID: 2285462391870251995}
   - component: {fileID: 5871134752551250269}
   - component: {fileID: 1778097737951721951}
-  - component: {fileID: 4099283673943903060}
   m_Layer: 3
   m_Name: Chasis
   m_TagString: Player
@@ -357,19 +342,6 @@ PolygonCollider2D:
       - {x: 1.485, y: -0.775}
       - {x: 1.535, y: -0.555}
   m_UseDelaunayMesh: 0
---- !u!114 &4099283673943903060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2925029781667470452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49fff9ca0e2173b43a95802ace804c04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: 4ccc47fc96a5419438ef267849ce3db4, type: 2}
 --- !u!1 &6236308710344641297
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +544,6 @@ GameObject:
   - component: {fileID: 6542620876586508249}
   - component: {fileID: 1284177254370009423}
   - component: {fileID: 3244906421430820213}
-  - component: {fileID: 5560263918496769217}
   m_Layer: 3
   m_Name: BackTire
   m_TagString: Player
@@ -709,16 +680,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.505
---- !u!114 &5560263918496769217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6417434749713109527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49fff9ca0e2173b43a95802ace804c04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: 4ccc47fc96a5419438ef267849ce3db4, type: 2}

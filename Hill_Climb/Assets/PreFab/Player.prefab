@@ -76,6 +76,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3f272d45-c126-47fa-bde6-83cc9bcee66c
     m_ActionName: Car/Drive[/Mouse/leftButton,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9e5a578f-7486-4dfa-a182-bc7b3a7397eb
+    m_ActionName: Car/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Player1
   m_DefaultActionMap: Car
@@ -257,9 +261,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: LocalMultiPlayerVehicle
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -8624975471061778655, guid: 4833358eff4fa4a4baa51fabc7eeff8e, type: 3}
-    - {fileID: -8606488863163774602, guid: 4833358eff4fa4a4baa51fabc7eeff8e, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

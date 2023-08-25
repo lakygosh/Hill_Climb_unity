@@ -16,7 +16,7 @@ using UnityEngine.Networking;
 
 public class PlayerManager : MonoBehaviour
 {
-    private List<PlayerDTO> playerDTOs = new List<PlayerDTO>();
+    private static List<PlayerDTO> _playerDTOs;
     [SerializeField]
     private Player selectedPlayer;
     [SerializeField] private TextMeshProUGUI welcomeMessage;
@@ -45,10 +45,8 @@ public class PlayerManager : MonoBehaviour
                 
                 Debug.Log("Response: " + www.downloadHandler.text);
                 
-                playerDTOs = JsonConvert.DeserializeObject<List<PlayerDTO>>(responsePayload);
+                _playerDTOs = JsonConvert.DeserializeObject<List<PlayerDTO>>(responsePayload);
 
-                    Debug.Log("Parsed First Player Surname: " + playerDTOs.First().Surname);
-                
             }
         }
     }
@@ -123,6 +121,11 @@ public class PlayerManager : MonoBehaviour
                 string responsePayload = www.downloadHandler.text;
             }
         }
+    }
+    
+    public static List<PlayerDTO> GetPlayerDTOs()
+    {
+        return _playerDTOs;
     }
     
 }

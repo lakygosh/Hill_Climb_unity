@@ -1,21 +1,26 @@
 using Car;
+using System;
+using TMPro;
 using UnityEngine;
 
 public class CollectCoin : MonoBehaviour
 {
 	public static CollectCoin instance;
 
-	[SerializeField] private Transform _coin;
+    [SerializeField] private Transform _coin;
     [SerializeField] private Player player;
 
     private Vector3 _lastCoinPosition;
 
-	private void OnTriggerEnter2D(Collider2D collision)
+    private float _yOffset = 2f; // Offset from the terrain
+    private bool _entered = false;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Coin"))
         {
             CoinController.instance.AddCoins();
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 
@@ -29,27 +34,72 @@ public class CollectCoin : MonoBehaviour
         _lastCoinPosition = transform.position;
     }
 
+    private void OnValidate()
+    {
+        //// Get the terrain height at the X position of the coin
+        //float terrainHeight = GetTerrainHeightAtPosition(transform.position.x);
+
+        //// Calculate the coin's position above the terrain
+        //Vector3 coinPosition = transform.position;
+        //coinPosition.y = terrainHeight + _yOffset;
+
+
+        //transform.position = coinPosition;
+        //_lastCoinPosition = transform.position;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        float terrainHeight = GetTerrainHeightAtPosition(_lastCoinPosition.x);
+
+        // Calculate the coin's initial position above the terrain
+        _lastCoinPosition.y = terrainHeight + _yOffset;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(_lastCoinPosition, player.transform.position) <= 100f)
+        if (Vector3.Distance(_lastCoinPosition, player.transform.position) <= 40f)
         {
-            _lastCoinPosition = CoinGenerator(_lastCoinPosition + Vector3.right * 600f);
+            // Get the terrain height at the X position of the coin
+            float terrainHeight = GetTerrainHeightAtPosition(_lastCoinPosition.x + 100f);
+
+            // Calculate the coin's position above the terrain
+
+            _lastCoinPosition.y = terrainHeight + _yOffset;
+            _lastCoinPosition.x += 100f;
+
+            // Set the new coin position
+            //transform.position = coinPosition;
+
+
+            //_lastCoinPosition = CoinGenerator(_lastCoinPosition + Vector3.right * 600f);
+            CoinGenerator(_lastCoinPosition);
         }
 		
     }
 
-	public Vector3 CoinGenerator(Vector3 coinPositon)
+	public void CoinGenerator(Vector3 coinPositon)
     {
         Instantiate(_coin, coinPositon, Quaternion.identity);
-        return coinPositon;
     }
 
+    private float GetTerrainHeightAtPosition(float xPosition)
+    {
+        // Perform a raycast or other method to determine terrain height at the given xPosition
+        // Replace this with your actual terrain height calculation logic
+        // Example raycast:
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(xPosition, 10000f), Vector2.down);
 
+        if (hit.collider != null)
+        {
+            return hit.point.y;
+        }
+        else
+        {
+            // Fallback value if the raycast doesn't hit 
+            return 0f;
+        }
+    }
 }
