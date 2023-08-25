@@ -32,8 +32,9 @@ public class Leaderboard : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("Leaderboard");
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
+
     }
     
     public void GetLeaderboard(List<PlayerDTO> playerDTOs)

@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.Video;
 
@@ -9,6 +11,14 @@ public class MenusBackground : MonoBehaviour
 {
     [SerializeField]
     private VideoPlayer videoPlayer;
+
+    private void Awake()
+    {
+        if (!SceneManager.GetSceneByName("MainMenu").isLoaded)
+        {
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
+        }
+    }
     // Start is called before the first frame update
     /*void Start()
     {

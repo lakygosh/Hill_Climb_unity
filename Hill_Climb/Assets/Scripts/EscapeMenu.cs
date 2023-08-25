@@ -20,7 +20,7 @@ public class EscapeMenu : MonoBehaviour
     
     public void MainMenu () 
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Background");
         
     }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -10,13 +11,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private VideoPlayer videoPlayer;
     
-private void Awake()
+    private void Awake()
     {
-        if (!SceneManager.GetSceneByName("Background").isLoaded)
-        {
-            SceneManager.LoadScene("Background", LoadSceneMode.Additive);
-        }
+        
     }
+    
+    
     
     public void PlaySinglePlayer () 
     {
@@ -36,8 +36,8 @@ private void Awake()
     
     public static void Leaderboard()
     {
-        SceneManager.LoadScene("Leaderboard", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("MainMenu");
+        SceneManager.LoadScene("Leaderboard", LoadSceneMode.Additive);
         
     }
 
