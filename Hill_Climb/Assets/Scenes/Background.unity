@@ -338,6 +338,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6163794422986181425, guid: c00dafd4b43a81b46809a68ab4933357, type: 3}
       propertyPath: m_DataSource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163794422986181425, guid: c00dafd4b43a81b46809a68ab4933357, type: 3}
+      propertyPath: m_SkipOnDrop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163794422986181425, guid: c00dafd4b43a81b46809a68ab4933357, type: 3}
+      propertyPath: m_AspectRatio
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163794422986181425, guid: c00dafd4b43a81b46809a68ab4933357, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6163794422986181425, guid: c00dafd4b43a81b46809a68ab4933357, type: 3}
@@ -347,6 +359,18 @@ PrefabInstance:
     - target: {fileID: 6163794422986181425, guid: c00dafd4b43a81b46809a68ab4933357, type: 3}
       propertyPath: m_TimeUpdateMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163794422986181425, guid: c00dafd4b43a81b46809a68ab4933357, type: 3}
+      propertyPath: m_AudioOutputMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163794422986181425, guid: c00dafd4b43a81b46809a68ab4933357, type: 3}
+      propertyPath: m_WaitForFirstFrame
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163794422986181425, guid: c00dafd4b43a81b46809a68ab4933357, type: 3}
+      propertyPath: m_DirectAudioMutes.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -487,6 +511,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1284906311121374175, guid: c00dafd4b43a81b46809a68ab4933357, type: 3}
   m_PrefabInstance: {fileID: 803750603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1672444121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672444123}
+  - component: {fileID: 1672444122}
+  m_Layer: 0
+  m_Name: OnlineVideoLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1672444122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672444121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeacc67dc66fe1245aad9a179276bb23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 803750605}
+  videoUrl: http://localhost:8080/background.mp4
+--- !u!4 &1672444123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672444121}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 420.7431, y: 213.27556, z: 2.2500668}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846638710
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,3 +638,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 79636742}
   - {fileID: 843511080}
+  - {fileID: 1672444123}

@@ -13,7 +13,6 @@ public class CollectCoin : MonoBehaviour
     private Vector3 _lastCoinPosition;
 
     private float _yOffset = 2f; // Offset from the terrain
-    private bool _entered = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
