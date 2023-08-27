@@ -1,4 +1,5 @@
 using System.Threading;
+using Cinemachine;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public static bool _escapeMenuOn = false;
+    private static bool isGameOver = false;
 
     public static bool EscapeMenuOn
     {
@@ -15,30 +17,27 @@ public class GameManager : MonoBehaviour
     }
 
     [SerializeField] private GameObject _gameOverCanvas;
-    [SerializeField] private GameObject _gamePauseCanvas;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
+        
+        isGameOver = false;
 
         Time.timeScale = 1.0f;
     }
 
-    public void GamePaused()
-    {
-        _gamePauseCanvas.SetActive(true);
-        Time.timeScale = 0f;
-    }
 
     public void GameOver()
     {
+        isGameOver = true;
         TextMeshProUGUI score = _gameOverCanvas.GetComponentInChildren<TextMeshProUGUI>();
-        Debug.Log(score);
         ScoreController.instance.saveScore(ref score);
         _gameOverCanvas.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f; if we want to stop the game
     }
     
     // Start is called before the first frame update
@@ -70,4 +69,6 @@ public class GameManager : MonoBehaviour
         }
         
     }
+
+    public static bool IsGameOver => isGameOver;
 }

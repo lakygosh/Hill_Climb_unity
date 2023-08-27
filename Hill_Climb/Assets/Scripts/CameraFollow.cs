@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target;
 
-    public float smoothSpeed = 0.125f;
+    public float smoothSpeed = 0.25f;
     public Vector3 offset;
     [SerializeField] private SpriteRenderer _frontTireSprite;
     [SerializeField] private SpriteRenderer _backTireSprite;

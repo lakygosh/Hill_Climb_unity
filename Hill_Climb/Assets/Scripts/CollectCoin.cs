@@ -18,7 +18,10 @@ public class CollectCoin : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Coin"))
         {
-            CoinController.instance.AddCoins();
+            if (!GameManager.IsGameOver)
+            {
+                CoinController.instance.AddCoins();
+            }
             Destroy(collision.gameObject);
         }
     }

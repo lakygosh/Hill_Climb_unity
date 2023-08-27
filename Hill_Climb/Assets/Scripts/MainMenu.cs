@@ -25,14 +25,10 @@ public class MainMenu : MonoBehaviour
     
     public void PlayMultiPlayer () 
     {
-        SceneManager.LoadScene("MultiplayerRoom");
+        SceneManager.LoadScene("LocalMultiPlayer");
         
     }
     
-    public void Quit()
-    { 
-        Application.Quit();
-    }
     
     public static void Leaderboard()
     {
@@ -43,14 +39,5 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Quit();
-        }
-    }
-    
-    public void Debug()
-    {
-        UnityEngine.Debug.Log("Debug");
     }
 }

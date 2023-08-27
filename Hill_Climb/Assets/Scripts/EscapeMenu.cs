@@ -7,9 +7,9 @@ public class EscapeMenu : MonoBehaviour
     {
         if (GameManager._escapeMenuOn)
         {
-            SceneManager.UnloadSceneAsync("EscapeMenu");
-            Time.timeScale = 1;
             GameManager._escapeMenuOn = false;
+            Time.timeScale = 1;
+            SceneManager.UnloadSceneAsync("EscapeMenu");
         }
     }
     
@@ -20,14 +20,11 @@ public class EscapeMenu : MonoBehaviour
     
     public void MainMenu () 
     {
+        GameManager._escapeMenuOn = false;
         SceneManager.LoadScene("Background");
         
     }
 
-    public void Quit()
-    { 
-        Application.Quit();
-    }
 
     private void Update()
     {

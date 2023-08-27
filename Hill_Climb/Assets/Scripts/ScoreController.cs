@@ -30,15 +30,18 @@ public class ScoreController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance = (Vector2)_playerTrans.position - _startPosition;
-        distance.y = 0f;
+        if (!GameManager.IsGameOver)
+        {
+            distance = (Vector2)_playerTrans.position - _startPosition;
+            distance.y = 0f;
 
-        if (distance.x < 0f)
-        { 
-            distance.x = 0f;
-        }    
+            if (distance.x < 0f)
+            {
+                distance.x = 0f;
+            }
 
-        _distanceText.text = distance.x.ToString("F0") + " m";
+            _distanceText.text = distance.x.ToString("F0") + " m";
+        }
     }
     
     

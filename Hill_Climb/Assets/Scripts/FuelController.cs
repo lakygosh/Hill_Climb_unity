@@ -14,7 +14,6 @@ public class FuelController : MonoBehaviour
     [SerializeField] private float _maxFuelAmount = 100f;
     [SerializeField] private Gradient _fuelGradient;
     
-    private bool called = false;
 
     private float _currentFuelAmount;
 
@@ -40,15 +39,15 @@ public class FuelController : MonoBehaviour
 
     private void UpdateUI()
     {
-        _fuelImage.fillAmount = (_currentFuelAmount / _maxFuelAmount);
-        _fuelImage.color = _fuelGradient.Evaluate(_fuelImage.fillAmount);
-
-        if (_currentFuelAmount <= 0f)
+        if (!GameManager.IsGameOver)
         {
-            if (!called)
+
+            _fuelImage.fillAmount = (_currentFuelAmount / _maxFuelAmount);
+            _fuelImage.color = _fuelGradient.Evaluate(_fuelImage.fillAmount);
+
+            if (_currentFuelAmount <= 0f)
             {
-                GameManager.instance.GameOver();
-                called = true;
+                    GameManager.instance.GameOver();
             }
         }
     }

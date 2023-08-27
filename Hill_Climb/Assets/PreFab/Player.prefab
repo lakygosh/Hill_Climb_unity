@@ -25,6 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4839713900367873245}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.86210495, y: 6.2869735, z: -0.004500015}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,7 +34,6 @@ Transform:
   - {fileID: 159325960567373588}
   - {fileID: 4224249283291095905}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5142685963531854220
 MonoBehaviour:
@@ -97,11 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ee809c6b378ca4ba6ab5e30f9fa52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carTransform: {fileID: 7887062177031576860}
   _frontTireRB: {fileID: 8356396224662999165}
   _backTireRB: {fileID: 3615145908532263161}
   _carRB: {fileID: 249359778027386063}
   _speed: 267.5
   _rotationSpeed: 300
+  flipThreshold: -0.5
+  delayBeforeReact: 1
 --- !u!1001 &982991924080629941
 PrefabInstance:
   m_ObjectHideFlags: 0
