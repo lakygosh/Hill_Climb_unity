@@ -36,8 +36,7 @@ public class BackgroundController : MonoBehaviour
         if (Vector3.Distance(_lastBackgroundFragmentPos, _player.GetPosition()) < BACKGROUND_FRAGMENT_DISSTANCE)
         {
             //render BACKGROUND part
-            _lastBackgroundFragmentPos = BackgroundGenerator(_lastBackgroundFragmentPos + Vector3.right * 110f);
-
+            _lastBackgroundFragmentPos = BackgroundGenerator(_lastBackgroundFragmentPos + Vector3.right * 100f);
         }
     }
 
