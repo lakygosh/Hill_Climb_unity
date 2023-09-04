@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 773868305909398166}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.99, y: 4.16, z: 9.914837}
+  m_LocalPosition: {x: -3.98, y: 4.15, z: 9.914837}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: b2f4a2e1252a84a47adf18ce9eb5ef9c, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 773868305909398166}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b2f4a2e1252a84a47adf18ce9eb5ef9c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -175,8 +175,8 @@ Transform:
   m_GameObject: {fileID: 2925029781667470452}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.0732203, y: 4.9452143, z: 9.914837}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.07353, y: 4.9452143, z: 9.914837}
+  m_LocalScale: {x: 0.99991, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2436392944815859362}
@@ -242,7 +242,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 2925029781667470452}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 018a8a6f59f656049bcc92bd5520f232, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -282,20 +282,55 @@ PolygonCollider2D:
       - {x: 2.0249999, y: -0.225}
       - {x: 2.225, y: -0.225}
       - {x: 2.365, y: -0.255}
-      - {x: 2.565, y: -0.405}
-      - {x: 2.645, y: -0.635}
-      - {x: 2.655, y: -0.695}
-      - {x: 2.675, y: -0.715}
-      - {x: 3.0049999, y: -0.715}
-      - {x: 3.205, y: -0.705}
-      - {x: 3.2549999, y: -0.655}
-      - {x: 3.335, y: -0.525}
-      - {x: 3.335, y: -0.49499997}
+      - {x: 2.467903, y: -0.30440366}
+      - {x: 2.5664542, y: -0.39554718}
+      - {x: 2.636027, y: -0.53371656}
+      - {x: 2.6493533, y: -0.61404645}
+      - {x: 2.6573606, y: -0.621913}
+      - {x: 2.6579084, y: -0.6920907}
+      - {x: 2.659731, y: -0.71136457}
+      - {x: 2.8860762, y: -0.7103981}
+      - {x: 2.8904831, y: -0.70208204}
+      - {x: 3.0049999, y: -0.7001735}
+      - {x: 3.2065337, y: -0.7014218}
+      - {x: 3.2509096, y: -0.64426285}
+      - {x: 3.331421, y: -0.5219317}
+      - {x: 3.3400574, y: -0.50564164}
+      - {x: 3.3444755, y: -0.48961997}
+      - {x: 3.2894678, y: -0.4891164}
       - {x: 3.385, y: -0.355}
-      - {x: 3.475, y: -0.305}
-      - {x: 3.5149999, y: -0.255}
-      - {x: 3.5149999, y: -0.105}
-      - {x: 3.435, y: -0.024999999}
+      - {x: 3.3999374, y: -0.32205427}
+      - {x: 3.4349716, y: -0.31911948}
+      - {x: 3.4536135, y: -0.30060676}
+      - {x: 3.4704828, y: -0.29112214}
+      - {x: 3.4794416, y: -0.2886857}
+      - {x: 3.4796944, y: -0.28298783}
+      - {x: 3.48848, y: -0.27862507}
+      - {x: 3.490085, y: -0.2693592}
+      - {x: 3.498328, y: -0.26610017}
+      - {x: 3.5019724, y: -0.25133407}
+      - {x: 3.5095196, y: -0.24590388}
+      - {x: 3.510668, y: -0.21034849}
+      - {x: 3.5159042, y: -0.21056324}
+      - {x: 3.5171602, y: -0.1851486}
+      - {x: 3.5173657, y: -0.1496376}
+      - {x: 3.5116959, y: -0.14944686}
+      - {x: 3.5106828, y: -0.12199702}
+      - {x: 3.5016906, y: -0.118023776}
+      - {x: 3.4997692, y: -0.10153029}
+      - {x: 3.490227, y: -0.10053862}
+      - {x: 3.4894335, y: -0.091435336}
+      - {x: 3.4804027, y: -0.08966276}
+      - {x: 3.47908, y: -0.08170658}
+      - {x: 3.470677, y: -0.07994419}
+      - {x: 3.469321, y: -0.07116403}
+      - {x: 3.4601004, y: -0.069292285}
+      - {x: 3.4579422, y: -0.061009303}
+      - {x: 3.4403017, y: -0.059794955}
+      - {x: 3.4397552, y: -0.04185189}
+      - {x: 3.433875, y: -0.039624278}
+      - {x: 3.403761, y: -0.03686099}
+      - {x: 3.3888268, y: -0.0166787}
       - {x: 3.3049998, y: 0.035}
       - {x: 3.0249999, y: 0.114999995}
       - {x: 2.685, y: 0.16499999}
@@ -355,10 +390,11 @@ GameObject:
   - component: {fileID: 5757811723105884795}
   - component: {fileID: 1939060366973463915}
   - component: {fileID: 1601818660280844808}
-  - component: {fileID: -7580855990828246203}
   - component: {fileID: 1000236794408791422}
+  - component: {fileID: -2547552754765072686}
+  - component: {fileID: 398786912083632134}
   m_Layer: 3
-  m_Name: SinglePlayerVehicle
+  m_Name: SinglePlayerVehicle1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -374,7 +410,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 10, z: -15}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2285462391870251995}
@@ -407,7 +443,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!235 &5757811723105884795
 WheelJoint2D:
@@ -471,31 +507,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ee809c6b378ca4ba6ab5e30f9fa52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carTransform: {fileID: 2436392944815859362}
   _frontTireRB: {fileID: 5768590451954010571}
   _backTireRB: {fileID: 1284177254370009423}
   _carRB: {fileID: 2345287996989664633}
   _speed: 700
   _rotationSpeed: 300
---- !u!114 &-7580855990828246203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6236308710344641297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 951099334
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 0
+  _virtualCamera: {fileID: 4997914384669301539, guid: 3de897d88516a594396911d3b51dbf3b, type: 3}
 --- !u!114 &1000236794408791422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +576,32 @@ MonoBehaviour:
   m_DefaultActionMap: Car
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-2547552754765072686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236308710344641297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea77b1d0920d479468b0b7425f235189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coin: {fileID: 1535016885207513356, guid: fbcb401e439763845af5b95726dff239, type: 3}
+--- !u!114 &398786912083632134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236308710344641297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc048526a27ff2c419f744071811bc56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fuelCanister: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
 --- !u!1 &6417434749713109527
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +630,7 @@ Transform:
   m_GameObject: {fileID: 6417434749713109527}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.07, y: 4.16, z: 9.914837}
+  m_LocalPosition: {x: -8.08, y: 4.15, z: 9.914837}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -660,7 +704,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: b2f4a2e1252a84a47adf18ce9eb5ef9c, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -680,7 +724,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 6417434749713109527}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b2f4a2e1252a84a47adf18ce9eb5ef9c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
