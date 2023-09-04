@@ -8,7 +8,7 @@ public class CollectCoin : MonoBehaviour
 	public static CollectCoin instance;
 
     [SerializeField] private Transform _coin;
-    [SerializeField] private Player player;
+    private Player player;
 
     private Vector3 _lastCoinPosition;
 
@@ -32,7 +32,6 @@ public class CollectCoin : MonoBehaviour
         {
             instance = this;
         }
-
         _lastCoinPosition = transform.position;
     }
 
@@ -53,6 +52,7 @@ public class CollectCoin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = PlayerSpawner.spawnedObject.GetComponent<Player>();
         float terrainHeight = GetTerrainHeightAtPosition(_lastCoinPosition.x);
 
         // Calculate the coin's initial position above the terrain

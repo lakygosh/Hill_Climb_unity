@@ -9,7 +9,7 @@ public class BackgroundController : MonoBehaviour
 
     public static BackgroundController instance;
 
-    [SerializeField] private Player _player;
+    private Player _player;
     [SerializeField] private Transform _backgroundFragment;
 
     private Vector3 _lastBackgroundFragmentPos;
@@ -26,7 +26,7 @@ public class BackgroundController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _player = PlayerSpawner.spawnedObject.GetComponent<Player>();
     }
 
     // Update is called once per frame

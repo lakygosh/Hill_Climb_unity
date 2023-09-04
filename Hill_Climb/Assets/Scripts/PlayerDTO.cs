@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 using Car;
 using Newtonsoft.Json;
@@ -30,18 +32,29 @@ namespace DefaultNamespace
         [JsonProperty ("BestScore")]
         public float BestScore { get; set; } = 0;
         
+        [XmlElement("UnlockedCars")]
+        [JsonProperty ("UnlockedCars")]
+        public ArrayList UnlockedCars { get; set; } = new ArrayList();
+        
         [XmlIgnore]
         [JsonIgnore]
         public float LastScore { get; set; } = 0;
-
-
-        public PlayerDTO(string name, string surname, int id, float coins, float bestScore)
+        
+        [XmlElement("SelectedCar")]
+        [JsonProperty ("SelectedCar")]
+        public string SelectedCar { get; set; } = "Car1";
+        
+        
+        public PlayerDTO(string name, string surname, int id, float coins, float bestScore,
+            ArrayList unlockedCars, string selectedCar)
         {
             Name = name;
             Surname = surname;
             Id = id;
             Coins = coins;
             BestScore = bestScore;
+            UnlockedCars = unlockedCars;
+            SelectedCar = selectedCar;
         }
 
         public PlayerDTO(string name, string surname, int id)

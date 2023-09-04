@@ -8,8 +8,6 @@ using UnityEngine.Video;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField]
-    private VideoPlayer videoPlayer;
     
     private void Awake()
     {
@@ -35,6 +33,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.UnloadSceneAsync("MainMenu");
         SceneManager.LoadScene("Leaderboard", LoadSceneMode.Additive);
         
+    }
+    
+    public void Shop()
+    {
+        SceneManager.UnloadSceneAsync("MainMenu");
+        SceneManager.LoadScene("Shop", LoadSceneMode.Additive);
     }
 
     private void Update()

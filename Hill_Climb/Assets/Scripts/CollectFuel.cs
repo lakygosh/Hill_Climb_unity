@@ -4,18 +4,20 @@ using UnityEngine;
 public class CollectFuel : MonoBehaviour
 {
     public static CollectFuel instance;
-    public EnviromentGenerator enviromentGenerator = new EnviromentGenerator();
 
     [SerializeField] private Transform _fuelCanister;
-    [SerializeField] private Player _player;
+    private Player _player;
 
     private Vector3 _lastFuelPosition;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Fuel"))
         {
-            FuelController.instance.FillFuel();
-            Destroy(gameObject);
+            if (!GameManager.IsGameOver)
+            {
+                FuelController.instance.FillFuel();
+            }
+            Destroy(collision.gameObject);
         }
     }
 
@@ -26,13 +28,13 @@ public class CollectFuel : MonoBehaviour
             instance = this;
         }
 
-        _lastFuelPosition = transform.position;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _player = PlayerSpawner.spawnedObject.GetComponent<Player>();
+        _lastFuelPosition = transform.position;
     }
 
     // Update is called once per frame

@@ -9,8 +9,7 @@ using TMPro;
 public class CoinController : MonoBehaviour
 {
 	public static CoinController instance;
-	[SerializeField]
-	private Player player;
+	private Player _player;
 	[SerializeField] private Image _coinImage;
 	[SerializeField] private TextMeshProUGUI _coinText;
 
@@ -21,14 +20,15 @@ public class CoinController : MonoBehaviour
         {
             instance = this;   
         }
-        _coinText.text = player.playerData.Coins.ToString();
+	    _player = PlayerManager.GetSelectedPlayer();
+        _coinText.text = _player.playerData.Coins.ToString();
 
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -39,8 +39,8 @@ public class CoinController : MonoBehaviour
 
 	public void AddCoins() 
 	{
-		player.playerData.Coins += 100;
-		StartCoroutine(PlayerManager.SaveCoins(player));
-		_coinText.text = player.playerData.Coins.ToString();
+		PlayerManager.GetSelectedPlayer().playerData.Coins += 100;
+		StartCoroutine(PlayerManager.SaveCoins(PlayerManager.GetSelectedPlayer()));
+		_coinText.text = PlayerManager.GetSelectedPlayer().playerData.Coins.ToString();
 	}
 }

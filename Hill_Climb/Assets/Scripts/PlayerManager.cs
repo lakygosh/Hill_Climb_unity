@@ -13,9 +13,11 @@ using Newtonsoft.Json;
 using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
+    public static PlayerManager instance;
     private static List<PlayerDTO> _playerDTOs;
     [SerializeField]
     private Player selectedPlayer;
@@ -24,9 +26,13 @@ public class PlayerManager : MonoBehaviour
     
     private void Awake()
     {
-        StartCoroutine(LoadPlayers());
-        StartCoroutine(LoadSelected());
-
+        if (instance == null) 
+        {
+            instance = this;   
+            StartCoroutine(LoadPlayers());
+            StartCoroutine(LoadSelected());
+        }
+        
     }
     
     public IEnumerator LoadPlayers()
@@ -66,7 +72,7 @@ public class PlayerManager : MonoBehaviour
                 string responsePayload = www.downloadHandler.text;
 
                 PlayerDTO tempData = JsonConvert.DeserializeObject<PlayerDTO>(responsePayload);
-                selectedPlayer.LoadPlayerData(tempData);
+                instance.selectedPlayer.LoadPlayerData(tempData);
                 Debug.Log("Parsed Player Name: " + selectedPlayer.playerData.Name);
                 welcomeMessage.text = "Welcome " + selectedPlayer.playerData.Name +"!";
                 
@@ -123,9 +129,63 @@ public class PlayerManager : MonoBehaviour
         }
     }
     
+    public static IEnumerator SaveUnlockedCars(Player player)
+    {
+        string jsonData = JsonConvert.SerializeObject(player.playerData);
+        byte[] data = Encoding.UTF8.GetBytes(jsonData);
+        
+        using (UnityWebRequest www = new UnityWebRequest("http://localhost:8080/unlock-car", "POST"))
+        {
+            www.uploadHandler = new UploadHandlerRaw(data);
+            www.downloadHandler = new DownloadHandlerBuffer();
+            www.SetRequestHeader("Content-Type", "application/json");
+
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
+            {
+                Debug.LogError("Error saving new car: " + www.error);
+            }
+            else
+            {
+                string responsePayload = www.downloadHandler.text;
+            }
+        }
+    }
+    
+    public static IEnumerator SaveSelectedCar(Player player)
+    {
+        string jsonData = JsonConvert.SerializeObject(player.playerData);
+        byte[] data = Encoding.UTF8.GetBytes(jsonData);
+        
+        using (UnityWebRequest www = new UnityWebRequest("http://localhost:8080/selected-car", "POST"))
+        {
+            www.uploadHandler = new UploadHandlerRaw(data);
+            www.downloadHandler = new DownloadHandlerBuffer();
+            www.SetRequestHeader("Content-Type", "application/json");
+
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
+            {
+                Debug.LogError("Error saving selected car: " + www.error);
+            }
+            else
+            {
+                string responsePayload = www.downloadHandler.text;
+            }
+        }
+    }
+    
     public static List<PlayerDTO> GetPlayerDTOs()
     {
         return _playerDTOs;
+    }
+    
+    
+    public static Player GetSelectedPlayer()
+    {
+        return instance.selectedPlayer;
     }
     
 }

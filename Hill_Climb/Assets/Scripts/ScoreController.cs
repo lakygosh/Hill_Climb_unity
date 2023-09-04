@@ -8,8 +8,8 @@ public class ScoreController : MonoBehaviour
 {
 
     [SerializeField] private TextMeshProUGUI _distanceText;
-    [SerializeField] private Transform _playerTrans;
-    [SerializeField] private Player player;
+    private Transform _playerTrans;
+    private Player _player;
     public static ScoreController instance;
     public Vector2 distance;
     private void Awake()
@@ -24,6 +24,8 @@ public class ScoreController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _player = PlayerSpawner.spawnedObject.GetComponent<Player>();
+        _playerTrans = _player.transform;
         _startPosition = _playerTrans.position;
     }
 
@@ -47,11 +49,11 @@ public class ScoreController : MonoBehaviour
     
     public void saveScore(ref TextMeshProUGUI score)
     {
-        if(distance.x>player.playerData.BestScore)
+        if(distance.x>PlayerManager.GetSelectedPlayer().playerData.BestScore)
         {
-            player.playerData.BestScore = distance.x;
-            Debug.Log(player.playerData.BestScore);
-            StartCoroutine(PlayerManager.SaveScore(player));
+            PlayerManager.GetSelectedPlayer().playerData.BestScore = distance.x;
+            Debug.Log(_player.playerData.BestScore);
+            StartCoroutine(PlayerManager.SaveScore(PlayerManager.GetSelectedPlayer()));
             score.color = Color.green;
             score.text = "New Best Score: " + distance.x.ToString("F0") + " m";
         }

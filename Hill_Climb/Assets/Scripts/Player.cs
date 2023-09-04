@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 using Cinemachine;
 using DefaultNamespace;
 using Unity.Netcode;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -16,6 +18,7 @@ namespace Car
     {
         public PlayerDTO playerData;
 
+        public static Player instance;
         [SerializeField] private Transform carTransform;
         [SerializeField] private Rigidbody2D _frontTireRB;
         [SerializeField] private Rigidbody2D _backTireRB;
@@ -42,6 +45,11 @@ namespace Car
         
         private void Start()
         {
+            if (instance == null) 
+            {
+                instance = this;   
+            }
+            instance = PlayerManager.GetSelectedPlayer();
             StartCoroutine(StartDetectionAfterDelay());
         }
 
@@ -65,7 +73,7 @@ namespace Car
         
         public void LoadPlayerData(PlayerDTO data)
         {
-            playerData = new PlayerDTO(data.Name,data.Surname,data.Id,data.Coins,data.BestScore);
+            playerData = new PlayerDTO(data.Name,data.Surname,data.Id,data.Coins,data.BestScore,data.UnlockedCars, data.SelectedCar);
         }
         
 
