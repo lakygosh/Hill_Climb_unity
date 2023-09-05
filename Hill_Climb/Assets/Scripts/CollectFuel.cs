@@ -8,6 +8,7 @@ public class CollectFuel : MonoBehaviour
     [SerializeField] private Transform _fuelCanister;
     private Player _player;
 
+    private float _yOffset = 2f;
     private Vector3 _lastFuelPosition;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,21 +35,55 @@ public class CollectFuel : MonoBehaviour
     void Start()
     {
         _player = PlayerSpawner.spawnedObject.GetComponent<Player>();
-        _lastFuelPosition = transform.position;
+        float terrainHeight = GetTerrainHeightAtPosition(_lastFuelPosition.x);
+
+        // Calculate the coin's initial position above the terrain
+        _lastFuelPosition.y = terrainHeight + _yOffset;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(_lastFuelPosition, _player.transform.position) <= 100f)
+        if (Vector3.Distance(_lastFuelPosition, _player.transform.position) <= 40f)
         {
-            _lastFuelPosition = FuelGenerator(_lastFuelPosition + Vector3.right * 600f);//+ Vector3.up * (enviromentGenerator.transform.position.y));
+            // Get the terrain height at the X position of the coin
+            float terrainHeight = GetTerrainHeightAtPosition(_lastFuelPosition.x + 150f);
+
+            // Calculate the coin's position above the terrain
+
+            _lastFuelPosition.y = terrainHeight + _yOffset;
+            _lastFuelPosition.x += 150f;
+
+            // Set the new coin position
+            //transform.position = coinPosition;
+
+
+            //_lastCoinPosition = CoinGenerator(_lastCoinPosition + Vector3.right * 600f);
+            FuelGenerator(_lastFuelPosition);
         }
     }
 
-    public Vector3 FuelGenerator(Vector3 fuelPositon)
+    public void FuelGenerator(Vector3 fuelPositon)
     {
         Instantiate(_fuelCanister, fuelPositon, Quaternion.identity);
-        return fuelPositon;
+    }
+
+    private float GetTerrainHeightAtPosition(float xPosition)
+    {
+        // Perform a raycast or other method to determine terrain height at the given xPosition
+        // Replace this with your actual terrain height calculation logic
+        // Example raycast:
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(xPosition, 10000f), Vector2.down);
+
+        if (hit.collider != null)
+        {
+            return hit.point.y;
+        }
+        else
+        {
+            // Fallback value if the raycast doesn't hit 
+            return 0f;
+        }
     }
 }
+

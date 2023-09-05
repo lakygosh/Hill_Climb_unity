@@ -100,11 +100,10 @@ MonoBehaviour:
   carTransform: {fileID: 7887062177031576860}
   _frontTireRB: {fileID: 8356396224662999165}
   _backTireRB: {fileID: 3615145908532263161}
-  _carRB: {fileID: 249359778027386063}
+  _carRB: {fileID: 2345287996989664633, guid: 8e40c2b210b7d00438bbe8d023fa5ce1, type: 3}
   _speed: 267.5
   _rotationSpeed: 300
-  flipThreshold: -0.5
-  delayBeforeReact: 1
+  _virtualCamera: {fileID: 4997914384669301539, guid: 3de897d88516a594396911d3b51dbf3b, type: 3}
 --- !u!1001 &982991924080629941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,11 +271,6 @@ PrefabInstance:
 --- !u!4 &159325960567373588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2436392944815859362, guid: 4833358eff4fa4a4baa51fabc7eeff8e, type: 3}
-  m_PrefabInstance: {fileID: 2592318996352719286}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &249359778027386063 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 2345287996989664633, guid: 4833358eff4fa4a4baa51fabc7eeff8e, type: 3}
   m_PrefabInstance: {fileID: 2592318996352719286}
   m_PrefabAsset: {fileID: 0}
 --- !u!50 &3615145908532263161 stripped
