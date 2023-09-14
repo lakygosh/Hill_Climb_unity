@@ -35,14 +35,18 @@ namespace Car
         private float delayBeforeReact = 3f;
         private bool isFlipped = false;
         
-        [SerializeField]
         private CinemachineVirtualCamera _virtualCamera;
         
         public void Move(InputAction.CallbackContext context)
         {
             _moveInput = -context.ReadValue<float>();
         }
-        
+
+        private void Awake()
+        {
+            _virtualCamera = GameObject.FindGameObjectWithTag("VCam").GetComponent<CinemachineVirtualCamera>();
+        }
+
         private void Start()
         {
             if (instance == null) 
@@ -98,7 +102,7 @@ namespace Car
                 }
             }
             
-            if (carTransform.position.y<-30f)
+            if (carTransform.position.y<-25f)
             {
                 _virtualCamera.Follow = null;
                 _virtualCamera.LookAt = null;
