@@ -6,37 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3431f26d-6e07-4d35-88e1-ed8774531c77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/SinglePlayerVehicle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/SinglePlayerVehicle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/fuel-canister.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/fuel-canister.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SinglePlayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SinglePlayer.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackgroundController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollectCoin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CollectCoin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollectCoin.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CollectCoin.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollectFuel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CollectFuel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnviromentGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnviromentGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnviromentGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnviromentGenerator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WebRequests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WebRequests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CAR.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CAR/BackTire.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CAR/BackTire.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CAR/Chasis1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CAR/Chasis1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CAR/FrontTire.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CAR/FrontTire.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Background.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Background.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Shop.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Shop.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/Passion_One/PassionOne-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/Passion_One/PassionOne-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +70,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Gazi/Shop&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -214,10 +190,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23016">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8284">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23016" />
+      <option name="pid" value="8284" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -302,6 +278,10 @@
       <workItem from="1693691669236" duration="7110000" />
       <workItem from="1693743377769" duration="6668000" />
       <workItem from="1693782364851" duration="4336000" />
+      <workItem from="1693931307064" duration="1591000" />
+      <workItem from="1694616229907" duration="1892000" />
+      <workItem from="1694690317336" duration="604000" />
+      <workItem from="1694697033487" duration="1346000" />
     </task>
     <servers />
   </component>
@@ -340,6 +320,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs</url>
+          <line>82</line>
+          <properties documentPath="D:\Projects\Hill_Climb_unity\Hill_Climb\Assets\Scripts\ShopMenu.cs" initialLine="77" containingFunctionPresentation="Method 'ButtonClicked'">
+            <startOffsets>
+              <option value="3333" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3377" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

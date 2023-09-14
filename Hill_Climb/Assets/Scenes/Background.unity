@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 803750605}
-  videoUrl: http://localhost:8080/background.mp4
+  videoUrl: http://127.0.0.1:8080/background.mp4
 --- !u!4 &1672444123
 Transform:
   m_ObjectHideFlags: 0

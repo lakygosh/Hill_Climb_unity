@@ -26,6 +26,11 @@ public class ShopMenu : MonoBehaviour
 
     private Vector3 offset;
 
+    private void Awake()
+    {
+        carBuyingCanvas.gameObject.SetActive(false);
+    }
+
     private void Start()
     {
         foreach (Button button in buttons)
@@ -81,7 +86,6 @@ public class ShopMenu : MonoBehaviour
                 carBuyingText.text = clickedText.text;
                 carBuyingCoin.sprite = clickedCoinImage.sprite;
             }
-            
             gameObject.SetActive(false);
             carBuyingCanvas.gameObject.SetActive(true);
 
@@ -90,8 +94,10 @@ public class ShopMenu : MonoBehaviour
 
     private void AlignObjects(TextMeshProUGUI clickedText, Image clickedCoinImage)
     {
+        LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)carBuyingText.transform);
+        LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)carBuyingCoin.transform);
+        
         offset = new Vector3(clickedCoinImage.transform.position.x - clickedText.transform.position.x+40,0,0);
-
         carBuyingCoin.transform.position = carBuyingText.transform.position + offset;
     }
 
