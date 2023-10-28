@@ -33,7 +33,7 @@ namespace Car
         
         private float flipThreshold = -0.8f;
         private float delayBeforeReact = 3f;
-        private float jump = 20f;
+        private float jump = 10f;
 
         private bool isFlipped = false;
 
@@ -67,8 +67,9 @@ namespace Car
         {
             if (!GameManager.IsGameOver)
             {
-                if (_moveInput < 0) {
+                if (_moveInput != 0) {
                     Jump();
+                    
                 }
 
                 if (Speedometer.speed < 10)
@@ -83,8 +84,19 @@ namespace Car
 
         public void Jump()
         {
-            _carRB.AddForce(new Vector2(_carRB.velocity.x, jump));
+            //_carRB.AddForce(new Vector2(_carRB.velocity.x, jump));
+            if (IsGrounded())
+            {
+                _carRB.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+            }
         }
+
+        private bool IsGrounded()
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+            return hit.collider != null;
+        }
+
 
         public Vector3 GetPosition() 
         {
@@ -116,7 +128,7 @@ namespace Car
 
                 if (playerGroundRay.distance > 3.0)
                 {
-                    _carRB.AddTorque(_rotationSpeed * Time.fixedDeltaTime * (-0.5f));
+                    //_carRB.AddTorque(_rotationSpeed * Time.fixedDeltaTime * (-0.5f));
                 }
             }
             

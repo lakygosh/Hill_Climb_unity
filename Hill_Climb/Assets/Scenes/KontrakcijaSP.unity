@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000cb591e7f
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1946,7 +1946,7 @@ GameObject:
   - component: {fileID: 1230123195}
   - component: {fileID: 1230123198}
   - component: {fileID: 1230123199}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GROUND
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1976,7 +1976,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: 16.2, y: 3.0728118, z: 0}
+    - position: {x: 16.2, y: 4.461386, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -1984,7 +1984,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: 16.2, y: -20, z: 0}
+    - position: {x: 16.2, y: -50, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -1992,7 +1992,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: -20, y: -20, z: 0}
+    - position: {x: -20, y: -50, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -2080,8 +2080,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -1.9000015, y: -7.6867495, z: 0}
-    m_Extent: {x: 18.106155, y: 12.313252, z: 0}
+    m_Center: {x: -1.8999996, y: -22.686693, z: 0}
+    m_Extent: {x: 18.100023, y: 27.313314, z: 0}
   m_SpriteSortPoint: 0
 --- !u!4 &1230123197
 Transform:
@@ -2116,7 +2116,7 @@ MonoBehaviour:
   _xMultiplier: 36.2
   _yMultiplier: 9.6
   _curveSmoothness: 0.63
-  _noiseStep: 0.76342547
+  _noiseStep: 0.0449276
 --- !u!68 &1230123199
 EdgeCollider2D:
   m_ObjectHideFlags: 0
