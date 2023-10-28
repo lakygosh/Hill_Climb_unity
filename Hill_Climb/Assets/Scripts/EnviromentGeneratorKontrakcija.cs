@@ -19,12 +19,12 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
     [SerializeField] private LavaGridController _lavaController;
 
     private int _levelLength = 2;
-    [SerializeField, Range(1f, 50f)] private float _xMultiplier = 15f;
+    [SerializeField, Range(1f, 50f)] private float _xMultiplier = 2f;
     [SerializeField, Range(1f, 50f)] private float _yMultiplier = 2f;
     [SerializeField, Range(0f, 1f)] private float _curveSmoothness = 0.5f;
 
     [SerializeField] private float _noiseStep = 0.5f;
-    private float _bottom = 20f;
+    private float _bottom = 50f;
 
     private Vector3 _lastLvlFragmentPos; // memorize the last position and create a relative curve based on that position
     private int i = 0;
@@ -67,8 +67,8 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
 
     private void Update()
     {
-            if (Vector3.Distance(_lastLvlFragmentPos, _player.GetPosition()) < CAR_DISTANCE_SPAWN_MAP)
-            {
+        if (Vector3.Distance(_lastLvlFragmentPos, _player.GetPosition()) < CAR_DISTANCE_SPAWN_MAP)
+        {
             if (_mapRednerCounter == 3)
             {
                 FlatGroundRender();
@@ -85,53 +85,57 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
     private void FlatGroundRender()
     {
         int j = 0;
-        while (j < 5)
+        while (j < 3)
         {
-            _lastLvlFragmentPos = transform.position + new Vector3(i*_xMultiplier, 0);
+            _lastLvlFragmentPos = transform.position + new Vector3(i * _xMultiplier, _lastLvlFragmentPos.y);
 
-            if (j == 3)
+            if (j == 1)
             {
                 float _currentheight = _lastLvlFragmentPos.y;
                 _lastLvlFragmentPos += new Vector3(0, -_bottom);
 
-                _lavaController.LavaGenerator(new Vector3(_lastLvlFragmentPos.x + 160f, _lastLvlFragmentPos.y + 20f));
-
-                //_spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos);
-
-                //_spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
-                //_spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (50f * _curveSmoothness));
-                //_spriteShapeController.spline.SetRightTangent(i, Vector3.right * (50f * _curveSmoothness));
-
                 _spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos);
 
                 _spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
-                _spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (_xMultiplier * _curveSmoothness));
-                _spriteShapeController.spline.SetRightTangent(i, Vector3.right * (_xMultiplier * _curveSmoothness));
+                _spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (50f * _curveSmoothness));
+                _spriteShapeController.spline.SetRightTangent(i, Vector3.right * (50f * _curveSmoothness));
 
-                _lastLvlFragmentPos.y = _currentheight;
-            }
-            else
-            {
+
+
                 //_spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos);
 
                 //_spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
-                //_spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (50f * _curveSmoothness));
-                //_spriteShapeController.spline.SetRightTangent(i, Vector3.right * (50f * _curveSmoothness));
+                //_spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (_xMultiplier * _curveSmoothness));
+                //_spriteShapeController.spline.SetRightTangent(i, Vector3.right * (_xMultiplier * _curveSmoothness));
+                _lavaController.LavaGenerator(new Vector3(_lastLvlFragmentPos.x - 400f, _lastLvlFragmentPos.y + 50f, 0));
 
-                _spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos); 
+                _lastLvlFragmentPos.y = _currentheight;
+
+            }
+            else
+            {
+                _spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos);
 
                 _spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
-                _spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (_xMultiplier * _curveSmoothness));
-                _spriteShapeController.spline.SetRightTangent(i, Vector3.right * (_xMultiplier * _curveSmoothness));
+                _spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (50f * _curveSmoothness));
+                _spriteShapeController.spline.SetRightTangent(i, Vector3.right * (50f * _curveSmoothness));
+
+                //_spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos);
+
+                //_spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
+                //_spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (_xMultiplier * _curveSmoothness));
+                //_spriteShapeController.spline.SetRightTangent(i, Vector3.right * (_xMultiplier * _curveSmoothness));
+
             }
 
             i++;
             j++;
         }
 
-        _spriteShapeController.spline.InsertPointAt(i, new Vector3(_lastLvlFragmentPos.x, transform.position.y - _bottom));
+            _spriteShapeController.spline.InsertPointAt(i, new Vector3(_lastLvlFragmentPos.x, transform.position.y - _bottom));
 
-        _spriteShapeController.spline.InsertPointAt(i + 1, new Vector3(transform.position.x, transform.position.y - _bottom));
+            _spriteShapeController.spline.InsertPointAt(i + 1, new Vector3(transform.position.x, transform.position.y - _bottom));
+
     }
 
     private void MapRender()

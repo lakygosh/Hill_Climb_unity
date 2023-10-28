@@ -1976,7 +1976,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: 12.5, y: 3.8939903, z: 0}
+    - position: {x: 16.2, y: 3.0728118, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -1984,7 +1984,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: 12.5, y: -20, z: 0}
+    - position: {x: 16.2, y: -20, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -2017,13 +2017,13 @@ MonoBehaviour:
   m_Creator: {fileID: 0}
   m_Modifiers: []
   m_ColliderSegment:
-  - {x: -19.997757, y: 4.593962}
-  - {x: 12.502243, y: 4.021331}
-  - {x: 12.500002, y: -0.2971923}
-  - {x: 12.5, y: -20}
+  - {x: -19.9951, y: 4.593888}
+  - {x: 16.2049, y: 3.2000775}
+  - {x: 16.2, y: 2.7788475}
+  - {x: 16.2, y: -20}
   - {x: -20, y: -20}
   - {x: -20, y: 4.154899}
-  - {x: -19.997757, y: 4.593962}
+  - {x: -19.9951, y: 4.593888}
 --- !u!1971053207 &1230123196
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -2080,8 +2080,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -3.75, y: -7.6867027, z: 0}
-    m_Extent: {x: 16.25282, y: 12.313299, z: 0}
+    m_Center: {x: -1.9000015, y: -7.6867495, z: 0}
+    m_Extent: {x: 18.106155, y: 12.313252, z: 0}
   m_SpriteSortPoint: 0
 --- !u!4 &1230123197
 Transform:
@@ -2093,7 +2093,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20, y: 0, z: 0}
-  m_LocalScale: {x: 2.5964062, y: 2.5964062, z: 2.5964062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -2113,10 +2113,10 @@ MonoBehaviour:
   _spriteShapeController: {fileID: 1230123195}
   _rampController: {fileID: 3026911051618847207, guid: 033449c147ae2344092af80974b3572a, type: 3}
   _lavaController: {fileID: -3339525895834115128, guid: b11da3c471846bf4081b4d4c5807b849, type: 3}
-  _xMultiplier: 32.5
+  _xMultiplier: 36.2
   _yMultiplier: 9.6
   _curveSmoothness: 0.63
-  _noiseStep: 0.2653989
+  _noiseStep: 0.76342547
 --- !u!68 &1230123199
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2152,13 +2152,13 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -19.997757, y: 4.593962}
-  - {x: 12.502243, y: 4.021331}
-  - {x: 12.500002, y: -0.2971923}
-  - {x: 12.5, y: -20}
+  - {x: -19.9951, y: 4.593888}
+  - {x: 16.2049, y: 3.2000775}
+  - {x: 16.2, y: 2.7788475}
+  - {x: 16.2, y: -20}
   - {x: -20, y: -20}
   - {x: -20, y: 4.154899}
-  - {x: -19.997757, y: 4.593962}
+  - {x: -19.9951, y: 4.593888}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
