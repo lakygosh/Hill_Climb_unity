@@ -16,14 +16,14 @@ public class MainMenu : MonoBehaviour
     
     
     
-    public void PlaySinglePlayer () 
+    public void PlayKontrakcija () 
     {
-        SceneManager.LoadScene("SinglePlayer");
+        SceneManager.LoadScene("KontrakcijaSP");
     }
     
-    public void PlayMultiPlayer () 
+    public void PlayOpustanje () 
     {
-        SceneManager.LoadScene("LocalMultiPlayer");
+        SceneManager.LoadScene("OpustanjeSP");
         
     }
     

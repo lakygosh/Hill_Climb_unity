@@ -19,8 +19,7 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance;
     private static List<PlayerDTO> _playerDTOs;
-    [SerializeField]
-    private Player selectedPlayer;
+    [SerializeField] private Player selectedPlayer;
     [SerializeField] private TextMeshProUGUI welcomeMessage;
     
     

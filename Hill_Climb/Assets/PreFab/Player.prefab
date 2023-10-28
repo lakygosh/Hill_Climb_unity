@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7887062177031576860}
   - component: {fileID: 5142685963531854220}
   - component: {fileID: 3200807469819706973}
+  - component: {fileID: -1208594251957881680}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -103,7 +104,19 @@ MonoBehaviour:
   _carRB: {fileID: 2345287996989664633, guid: 8e40c2b210b7d00438bbe8d023fa5ce1, type: 3}
   _speed: 267.5
   _rotationSpeed: 300
-  _virtualCamera: {fileID: 4997914384669301539, guid: 3de897d88516a594396911d3b51dbf3b, type: 3}
+--- !u!114 &-1208594251957881680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4839713900367873245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5cbdafec7416fb4787fa3d62397e882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1001 &982991924080629941
 PrefabInstance:
   m_ObjectHideFlags: 0

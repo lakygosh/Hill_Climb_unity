@@ -18,12 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Leaderboard.unity
     guid: 40232d1ef828bd7419b6a8c80ce1a6ea
   - enabled: 1
-    path: Assets/Scenes/SinglePlayer.unity
+    path: Assets/Scenes/KontrakcijaSP.unity
     guid: e5a95f8819fd3824dbdaa3d8ec7e630f
   - enabled: 1
+    path: Assets/Scenes/OpustanjeSP.unity
+    guid: aaf98df859f372e4d997ed54193e4f3d
+  - enabled: 0
     path: Assets/Scenes/MultiplayerRoom.unity
     guid: 7945b04bfc295fc4fa4cbecd6b9e867a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LocalMultiPlayer.unity
     guid: 4bd88e76135ea9449b2895ac32be5847
   - enabled: 1

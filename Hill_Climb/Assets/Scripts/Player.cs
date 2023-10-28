@@ -17,15 +17,15 @@ namespace Car
     public class Player : MonoBehaviour
     {
         public PlayerDTO playerData;
-
+        //private Rigidbody2D rb;
         public static Player instance;
         [SerializeField] private Transform carTransform;
         [SerializeField] private Rigidbody2D _frontTireRB;
         [SerializeField] private Rigidbody2D _backTireRB;
         [SerializeField] private Rigidbody2D _carRB;
        
-        [SerializeField] private float _speed = 150f;
-        [SerializeField] private float _rotationSpeed = 300f;
+        [SerializeField] private float _speed = 5f;
+        [SerializeField] private float _rotationSpeed = 100f;
         private float _moveInput;
         
         private float delayBeforeStart = 2f;
@@ -33,9 +33,14 @@ namespace Car
         
         private float flipThreshold = -0.8f;
         private float delayBeforeReact = 3f;
+        private float jump = 20f;
+
         private bool isFlipped = false;
+
+        private bool initTorque = false;
         
         private CinemachineVirtualCamera _virtualCamera;
+        //public static Speedometer speedometar = new Speedometer();
         
         public void Move(InputAction.CallbackContext context)
         {
@@ -53,6 +58,7 @@ namespace Car
             {
                 instance = this;   
             }
+            //rb = GetComponent<Rigidbody2D>();
             instance = PlayerManager.GetSelectedPlayer();
             StartCoroutine(StartDetectionAfterDelay());
         }
@@ -61,11 +67,23 @@ namespace Car
         {
             if (!GameManager.IsGameOver)
             {
-                _frontTireRB.AddTorque(_moveInput * _speed * Time.fixedDeltaTime);
-                _backTireRB.AddTorque(_moveInput * _speed * Time.fixedDeltaTime);
-                _carRB.AddTorque(_moveInput * _rotationSpeed*Time.fixedDeltaTime*(-5));
+                if (_moveInput < 0) {
+                    Jump();
+                }
+
+                if (Speedometer.speed < 10)
+                {
+                    _frontTireRB.AddTorque(-_speed);
+                    //_backTireRB.AddTorque(-_speed);
+                    //_carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime * (-5));
+                }
             }
-  
+
+        }
+
+        public void Jump()
+        {
+            _carRB.AddForce(new Vector2(_carRB.velocity.x, jump));
         }
 
         public Vector3 GetPosition() 
