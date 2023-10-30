@@ -33,7 +33,7 @@ namespace Car
         
         private float flipThreshold = -0.8f;
         private float delayBeforeReact = 3f;
-        private float jump = 10f;
+        private float jump = 5f;
 
         private bool isFlipped = false;
 

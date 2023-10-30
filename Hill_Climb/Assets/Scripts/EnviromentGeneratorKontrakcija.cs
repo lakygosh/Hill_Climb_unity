@@ -15,11 +15,10 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
 
     [SerializeField] private SpriteShapeController _spriteShapeController;
     private Player _player;
-    [SerializeField] private RampController _rampController;
     [SerializeField] private LavaGridController _lavaController;
 
     private int _levelLength = 2;
-    [SerializeField, Range(1f, 50f)] private float _xMultiplier = 2f;
+    private float _xMultiplier = 20f;
     [SerializeField, Range(1f, 50f)] private float _yMultiplier = 2f;
     [SerializeField, Range(0f, 1f)] private float _curveSmoothness = 0.5f;
 
@@ -97,8 +96,8 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
                 _spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos);
 
                 _spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
-                _spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (50f * _curveSmoothness));
-                _spriteShapeController.spline.SetRightTangent(i, Vector3.right * (50f * _curveSmoothness));
+                _spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (100f * _curveSmoothness));
+                _spriteShapeController.spline.SetRightTangent(i, Vector3.right * (100f * _curveSmoothness));
 
 
 
