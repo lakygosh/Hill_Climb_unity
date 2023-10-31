@@ -10,6 +10,7 @@ TagManager:
   - Ramp
   - Lava
   - VCam
+  - LavaGO
   layers:
   - Default
   - TransparentFX

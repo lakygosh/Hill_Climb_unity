@@ -5,9 +5,9 @@ using UnityEngine;
 public class LavaGridController : MonoBehaviour
 {
     [SerializeField] internal Transform _lava;
+    private Transform _tempLava;
     internal GameManager gameManager;
-    // Start is called before the first frame update
-
+    private int _count;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Lava"))
@@ -21,7 +21,7 @@ public class LavaGridController : MonoBehaviour
     }
     void Start()
     {
-        
+        _count = 0;
     }
 
     // Update is called once per frame
@@ -32,6 +32,12 @@ public class LavaGridController : MonoBehaviour
 
     public void LavaGenerator(Vector3 lavaPos)
     {
-        Instantiate(_lava, lavaPos, Quaternion.identity);
+        if (_count > 2)
+        {
+            if(gameObject.CompareTag("Lava"))
+                Destroy(gameObject);
+        } 
+            _tempLava = Instantiate(_lava, lavaPos, Quaternion.identity);
+            _count++;
     }
 }

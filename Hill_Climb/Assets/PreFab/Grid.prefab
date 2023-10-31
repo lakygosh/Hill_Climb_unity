@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 23873022981144817}
   - component: {fileID: 7294356183823144955}
-  - component: {fileID: -3339525895834115128}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,19 +45,6 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &-3339525895834115128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7208542505130679397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d5f86213862de64fb2e72a79e3958df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lava: {fileID: 23873022981144817}
 --- !u!1 &8575630419071222391
 GameObject:
   m_ObjectHideFlags: 0
