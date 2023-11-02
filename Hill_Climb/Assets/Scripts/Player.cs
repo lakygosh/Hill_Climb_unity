@@ -26,6 +26,7 @@ namespace Car
        
         [SerializeField] private float _speed = 5f;
         [SerializeField] private float _rotationSpeed = 100f;
+        private SpeedSlider _speedSlider;
         private float _moveInput;
         
         private float delayBeforeStart = 2f;
@@ -61,6 +62,8 @@ namespace Car
             //rb = GetComponent<Rigidbody2D>();
             instance = PlayerManager.GetSelectedPlayer();
             StartCoroutine(StartDetectionAfterDelay());
+
+            //_speed = _speedSlider.GetSpeed(); //slajder !!!!
         }
 
         private void FixedUpdate()
@@ -89,6 +92,10 @@ namespace Car
             {
                 _carRB.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
             }
+        }
+        public void SetSpeed(float newSpeed)
+        {
+            _speed = newSpeed;
         }
 
         private bool IsGrounded()
