@@ -1945,7 +1945,6 @@ GameObject:
   - component: {fileID: 1230123196}
   - component: {fileID: 1230123195}
   - component: {fileID: 1230123198}
-  - component: {fileID: 1230123200}
   - component: {fileID: 1230123199}
   m_Layer: 9
   m_Name: GROUND
@@ -1977,7 +1976,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: 0, y: 3.9537117, z: 0}
+    - position: {x: 1, y: 2.7834656, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -1985,7 +1984,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: 0, y: -50, z: 0}
+    - position: {x: 1, y: -50, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -2081,8 +2080,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -10.000001, y: -22.68672, z: 0}
-    m_Extent: {x: 10.004102, y: 27.313288, z: 0}
+    m_Center: {x: -9.5, y: -22.686949, z: 0}
+    m_Extent: {x: 10.512783, y: 27.313059, z: 0}
   m_SpriteSortPoint: 0
 --- !u!4 &1230123197
 Transform:
@@ -2112,9 +2111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteShapeController: {fileID: 1230123195}
+  _lavaController: {fileID: 4952064491546888217, guid: b11da3c471846bf4081b4d4c5807b849, type: 3}
   _yMultiplier: 9.6
   _curveSmoothness: 0.63
-  _noiseStep: 0.9204112
+  _noiseStep: 0.5258412
 --- !u!68 &1230123199
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2161,19 +2161,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &1230123200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230123194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d5f86213862de64fb2e72a79e3958df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lava: {fileID: 23873022981144817, guid: b11da3c471846bf4081b4d4c5807b849, type: 3}
 --- !u!1 &1418334729
 GameObject:
   m_ObjectHideFlags: 0
