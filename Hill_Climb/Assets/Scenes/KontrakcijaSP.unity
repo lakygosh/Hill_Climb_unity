@@ -645,7 +645,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 30.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1450,8 +1450,8 @@ Transform:
   m_GameObject: {fileID: 730473398}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.7, y: 23.7, z: 0}
-  m_LocalScale: {x: 4.6301527, y: 4.6390657, z: 2.5617037}
+  m_LocalPosition: {x: -23.3847, y: 26.6165, z: 0}
+  m_LocalScale: {x: 8.047295, y: 9.955372, z: 3.6112337}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1968,7 +1968,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 0
     m_ControlPoints:
-    - position: {x: -20, y: 4.466622, z: 0}
+    - position: {x: -17.1, y: 0.23054618, z: -15}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -1976,7 +1976,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: 1, y: 2.7834656, z: 0}
+    - position: {x: 3.8999996, y: 0.16543514, z: -15}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -1984,7 +1984,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: 1, y: -50, z: 0}
+    - position: {x: 3.8999996, y: -50.7, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -1992,7 +1992,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: -20, y: -50, z: 0}
+    - position: {x: -17.1, y: -50.7, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -2017,13 +2017,12 @@ MonoBehaviour:
   m_Creator: {fileID: 0}
   m_Modifiers: []
   m_ColliderSegment:
-  - {x: -19.9951, y: 4.593888}
-  - {x: 16.2049, y: 3.2000775}
-  - {x: 16.2, y: 2.7788475}
-  - {x: 16.2, y: -20}
-  - {x: -20, y: -20}
-  - {x: -20, y: 4.154899}
-  - {x: -19.9951, y: 4.593888}
+  - {x: -17.099607, y: 0.35790557}
+  - {x: 3.9003942, y: 0.29279453}
+  - {x: 3.8999996, y: -50.7}
+  - {x: -17.1, y: -50.7}
+  - {x: -17.1, y: -0.41834664}
+  - {x: -17.099607, y: 0.35790557}
 --- !u!1971053207 &1230123196
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -2080,8 +2079,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -9.5, y: -22.686949, z: 0}
-    m_Extent: {x: 10.512783, y: 27.313059, z: 0}
+    m_Center: {x: -6.6000004, y: -25.154732, z: 0}
+    m_Extent: {x: 10.500496, y: 25.545277, z: 0}
   m_SpriteSortPoint: 0
 --- !u!4 &1230123197
 Transform:
@@ -2092,7 +2091,7 @@ Transform:
   m_GameObject: {fileID: 1230123194}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: 0}
+  m_LocalPosition: {x: -17.1, y: -0.7, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2112,9 +2111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteShapeController: {fileID: 1230123195}
   _lavaController: {fileID: 4952064491546888217, guid: b11da3c471846bf4081b4d4c5807b849, type: 3}
-  _yMultiplier: 9.6
-  _curveSmoothness: 0.63
-  _noiseStep: 0.5258412
+  _yMultiplier: 2
+  _curveSmoothness: 0.5
+  _noiseStep: 0.95166945
 --- !u!68 &1230123199
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2150,13 +2149,12 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -19.9951, y: 4.593888}
-  - {x: 16.2049, y: 3.2000775}
-  - {x: 16.2, y: 2.7788475}
-  - {x: 16.2, y: -20}
-  - {x: -20, y: -20}
-  - {x: -20, y: 4.154899}
-  - {x: -19.9951, y: 4.593888}
+  - {x: -17.099607, y: 0.35790557}
+  - {x: 3.9003942, y: 0.29279453}
+  - {x: 3.8999996, y: -50.7}
+  - {x: -17.1, y: -50.7}
+  - {x: -17.1, y: -0.41834664}
+  - {x: -17.099607, y: 0.35790557}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -2439,6 +2437,10 @@ PrefabInstance:
     - target: {fileID: 4997914384669301539, guid: 3de897d88516a594396911d3b51dbf3b, type: 3}
       propertyPath: m_LookAt
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997914384669301539, guid: 3de897d88516a594396911d3b51dbf3b, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 30.6
       objectReference: {fileID: 0}
     - target: {fileID: 5079349658467263691, guid: 3de897d88516a594396911d3b51dbf3b, type: 3}
       propertyPath: m_Name

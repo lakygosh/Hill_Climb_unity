@@ -410,8 +410,8 @@ Transform:
   m_GameObject: {fileID: 6236308710344641297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: -15}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalPosition: {x: 0, y: 9.29, z: -15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2285462391870251995}
@@ -571,6 +571,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9e5a578f-7486-4dfa-a182-bc7b3a7397eb
     m_ActionName: Car/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1601818660280844808}
+        m_TargetAssemblyTypeName: Car.Player, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cc3b0786-b9b8-4eb2-8161-e4b96fa8765e
+    m_ActionName: Car/Jump[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Player1
   m_DefaultActionMap: Car
@@ -614,7 +630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5cbdafec7416fb4787fa3d62397e882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
 --- !u!1 &6417434749713109527
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,12 +22,21 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "cc3b0786-b9b8-4eb2-8161-e4b96fa8765e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "8cb5ee68-2113-4e9d-97c4-a1edd2bfffd6",
+                    "id": "c2bbfeac-c061-4d08-9d5c-e437bb1ad205",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -55,6 +64,17 @@
                     "processors": "",
                     "groups": "Player1;Player2",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8cb5ee68-2113-4e9d-97c4-a1edd2bfffd6",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player1;Player2",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
