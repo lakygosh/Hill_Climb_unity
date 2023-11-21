@@ -34,6 +34,7 @@ public class DifficultyHandler : MonoBehaviour
                 _difficultyText.text = "Hard";
                 break;
         }
+        dropdown.value = Difficulty.SELECTED_DIFFICULTY;
         dropdown.onValueChanged.AddListener(delegate
         {
             DropdownValueChanged(dropdown);

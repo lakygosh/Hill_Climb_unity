@@ -42,8 +42,8 @@ namespace Car
         private bool initTorque = false;
         private bool jumpCalled = false;
         private bool lavaInRange = false;
-        private bool jumpCalledOnce = false;
-
+        private bool isJumping = false;
+        
         
         private CinemachineVirtualCamera _virtualCamera;
         //public static Speedometer speedometar = new Speedometer();
@@ -56,6 +56,7 @@ namespace Car
         private void Awake()
         {
             _virtualCamera = GameObject.FindGameObjectWithTag("VCam").GetComponent<CinemachineVirtualCamera>();
+            
         }
 
         private void Start()
@@ -75,71 +76,34 @@ namespace Car
         {
             if (!GameManager.IsGameOver)
             {
-
-                if (Speedometer.speed < 10)
+                Movement();
+                /*if (Speedometer.speed < 10)
                 {
                     _frontTireRB.AddTorque(-_speed);
                     //_backTireRB.AddTorque(-_speed);
                     //_carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime * (-5));
-                }
+                }*/
                 
                 GameObject? nextLava = getLavaGrids();
                 if (nextLava!=null && nextLava.transform.position.x - _carRB.transform.position.x + 350f < 10 &&
                     nextLava.transform.position.x - _carRB.transform.position.x + 350f > 0)
                 {
+                    _carRB.constraints = RigidbodyConstraints2D.FreezeRotation;
                     jumpCalled = false;
                 }
-                
 
-        }
-        }
-
-        public void Jump()
-        {
-            // Need a ray cast to check if the player is on the ground
-            var backTireTransform = _backTireRB.transform;
-            RaycastHit2D playerGroundRay = Physics2D.Raycast(new Vector2(backTireTransform.position.x, _backTireRB.position.y - 1.5f*backTireTransform.localScale.y / 2-0.01f), Vector2.down);
-            GameObject? nextLava = getLavaGrids();
-            if (nextLava != null)
-            {
-                if (isLavaInView(nextLava))
-                {
-                    jumpCalled = true;
-                    StartCoroutine(delayedJump());
-                }
             }
-            /*if (playerGroundRay.distance < 0.01f)
-            {
-                _carRB.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
-            }*/
-        }
-
-        public void SetSpeed(float newSpeed)
-        {
-            _speed = newSpeed;
         }
         
-
-        public Vector3 GetPosition() 
-        {
-
-                return transform.position;
-
-        }
-        
-        public void LoadPlayerData(PlayerDTO data)
-        {
-            playerData = new PlayerDTO(data.Name,data.Surname,data.Id,data.Coins,data.BestScore,data.UnlockedCars, data.SelectedCar);
-        }
-        
-
         private void Update()
         {
             if (canStartDetection)
             {
-                RaycastHit2D playerGroundRay =
-                    Physics2D.Raycast(new Vector2(carTransform.position.x, carTransform.position.y - 1.5f),
-                        Vector2.down);
+                RaycastHit2D playerGroundRay = Physics2D.Raycast(new Vector2(_backTireRB.transform.position.x, _backTireRB.position.y - 1.5f*_backTireRB.transform.localScale.y / 2-0.01f), Vector2.down);
+                if (playerGroundRay.distance < 1.5f)
+                {
+                    _carRB.constraints = RigidbodyConstraints2D.None;
+                }
                 if (!isFlipped && Vector3.Dot(transform.up, Vector3.up) < flipThreshold &&
                     playerGroundRay.distance < 1.5f)
                 {
@@ -163,6 +127,96 @@ namespace Car
             }
             
         }
+
+        private void Movement()
+        {
+            if (SceneManager.GetActiveScene().name == "OpustanjeSP")
+            {
+                if (_moveInput == 0)
+                {
+                    Break();
+                }
+                else
+                {
+                    Drive();
+                }
+            }
+            else
+            {
+                _frontTireRB.AddTorque(-_speed);
+                //_backTireRB.AddTorque(-_speed);
+                //_carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime * (-5));
+            }
+        }
+
+        private void Drive()
+        {
+            _frontTireRB.AddTorque(_moveInput * _speed * Time.fixedDeltaTime);
+            _backTireRB.AddTorque(_moveInput * _speed * Time.fixedDeltaTime);
+            _carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime * (-5));
+            _frontTireRB.angularDrag = 0f;
+            _backTireRB.angularDrag = 0f;
+        }
+
+        private void Break()
+        {
+            switch (Difficulty.SELECTED_DIFFICULTY)
+            {
+                case 0:
+                    _frontTireRB.angularDrag = 0.5f;
+                    _backTireRB.angularDrag = 0.5f;
+                    break; 
+                case 1:
+
+                    _frontTireRB.angularDrag = 2f;
+                    _backTireRB.angularDrag = 2f;
+                    break; 
+                case 2:
+                    _frontTireRB.angularDrag = 5f;
+                    _backTireRB.angularDrag = 5f;
+                    break; 
+                default: 
+                    _frontTireRB.angularDrag = 0.5f;
+                    _backTireRB.angularDrag = 0.5f;
+                    break; 
+            }
+         
+        }
+
+        public void Jump()
+        {
+            if(!isJumping){
+            GameObject? nextLava = getLavaGrids();
+            if (nextLava != null)
+            {
+                if (isLavaInView(nextLava))
+                {
+                    isJumping = true;
+                    jumpCalled = true;
+                    StartCoroutine(delayedJump());
+                }
+            }
+            }
+        }
+
+        public void SetSpeed(float newSpeed)
+        {
+            _speed = newSpeed;
+        }
+        
+
+        public Vector3 GetPosition() 
+        {
+
+                return transform.position;
+
+        }
+        
+        public void LoadPlayerData(PlayerDTO data)
+        {
+            playerData = new PlayerDTO(data.Name,data.Surname,data.Id,data.Coins,data.BestScore,data.UnlockedCars, data.SelectedCar);
+        }
+        
 
         IEnumerator DelayedFlipReaction()
         {
@@ -231,13 +285,9 @@ namespace Car
 
         private IEnumerator delayedJump()
         {
-            if (!jumpCalledOnce)
-            {
-                jumpCalledOnce = true;
                 yield return new WaitWhile(() => jumpCalled);
                 _carRB.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
-                jumpCalledOnce = false;
-            }
+                isJumping = false;
         }
     }
 }
