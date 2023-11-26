@@ -14,6 +14,8 @@ public class CollectFuel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Fuel"))
         {
+            SFXController.instance.FuelCollect();
+
             if (!GameManager.IsGameOver)
             {
                 FuelController.instance.FillFuel();

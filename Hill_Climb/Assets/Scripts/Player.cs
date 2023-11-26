@@ -24,15 +24,16 @@ namespace Car
         [SerializeField] private Rigidbody2D _frontTireRB;
         [SerializeField] private Rigidbody2D _backTireRB;
         [SerializeField] private Rigidbody2D _carRB;
-       
+
         [SerializeField] private float _speed = 5f;
         [SerializeField] private float _rotationSpeed = 100f;
+        private SFXController sfxController;
         private SpeedSlider _speedSlider;
         private float _moveInput;
-        
+
         private float delayBeforeStart = 2f;
         private bool canStartDetection = false;
-        
+
         private float flipThreshold = -0.8f;
         private float delayBeforeReact = 3f;
         private float jump = 50f;
@@ -43,11 +44,14 @@ namespace Car
         private bool jumpCalled = false;
         private bool lavaInRange = false;
         private bool isJumping = false;
-        
-        
+        GameObject correct;
+        GameObject jumpWarning;
+
+
+
         private CinemachineVirtualCamera _virtualCamera;
         //public static Speedometer speedometar = new Speedometer();
-        
+
         public void Move(InputAction.CallbackContext context)
         {
             _moveInput = -context.ReadValue<float>();
@@ -56,15 +60,20 @@ namespace Car
         private void Awake()
         {
             _virtualCamera = GameObject.FindGameObjectWithTag("VCam").GetComponent<CinemachineVirtualCamera>();
-            
+
         }
 
         private void Start()
         {
-            if (instance == null) 
+            if (instance == null)
             {
-                instance = this;   
+                instance = this;
             }
+            correct = GameObject.FindGameObjectWithTag("Correct");
+            jumpWarning = GameObject.FindGameObjectWithTag("JumpWarning");
+
+            correct.SetActive(false);
+            jumpWarning.SetActive(false);
             //rb = GetComponent<Rigidbody2D>();
             instance = PlayerManager.GetSelectedPlayer();
             StartCoroutine(StartDetectionAfterDelay());
@@ -83,23 +92,32 @@ namespace Car
                     //_backTireRB.AddTorque(-_speed);
                     //_carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime * (-5));
                 }*/
-                
+
                 GameObject? nextLava = getLavaGrids();
-                if (nextLava!=null && nextLava.transform.position.x - _carRB.transform.position.x + 350f < 10 &&
+                if (nextLava != null && nextLava.transform.position.x - _carRB.transform.position.x + 350f < 10 &&
                     nextLava.transform.position.x - _carRB.transform.position.x + 350f > 0)
                 {
                     _carRB.constraints = RigidbodyConstraints2D.FreezeRotation;
                     jumpCalled = false;
                 }
 
+                if (isLavaInView(nextLava))
+                {
+                    jumpWarning.SetActive(true);
+                    //SFXController.instance.JumpNotification();
+                }
+                else
+                { 
+                    jumpWarning.SetActive(false);
+                }
             }
         }
-        
+
         private void Update()
         {
             if (canStartDetection)
             {
-                RaycastHit2D playerGroundRay = Physics2D.Raycast(new Vector2(_backTireRB.transform.position.x, _backTireRB.position.y - 1.5f*_backTireRB.transform.localScale.y / 2-0.01f), Vector2.down);
+                RaycastHit2D playerGroundRay = Physics2D.Raycast(new Vector2(_backTireRB.transform.position.x, _backTireRB.position.y - 1.5f * _backTireRB.transform.localScale.y / 2 - 0.01f), Vector2.down);
                 if (playerGroundRay.distance < 1.5f)
                 {
                     _carRB.constraints = RigidbodyConstraints2D.None;
@@ -116,16 +134,18 @@ namespace Car
                 {
                     //_carRB.AddTorque(_rotationSpeed * Time.fixedDeltaTime * (-0.5f));
                 }
+
+                
             }
-            
-            if (carTransform.position.y<-25f)
+
+            if (carTransform.position.y < -25f)
             {
                 _virtualCamera.Follow = null;
                 _virtualCamera.LookAt = null;
                 GameManager.instance.GameOver();
-            
+
             }
-            
+
         }
 
         private void Movement()
@@ -165,37 +185,43 @@ namespace Car
                 case 0:
                     _frontTireRB.angularDrag = 0.5f;
                     _backTireRB.angularDrag = 0.5f;
-                    break; 
+                    break;
                 case 1:
 
                     _frontTireRB.angularDrag = 2f;
                     _backTireRB.angularDrag = 2f;
-                    break; 
+                    break;
                 case 2:
                     _frontTireRB.angularDrag = 5f;
                     _backTireRB.angularDrag = 5f;
-                    break; 
-                default: 
+                    break;
+                default:
                     _frontTireRB.angularDrag = 0.5f;
                     _backTireRB.angularDrag = 0.5f;
-                    break; 
+                    break;
             }
-         
+
         }
 
         public void Jump()
         {
-            if(!isJumping){
-            GameObject? nextLava = getLavaGrids();
-            if (nextLava != null)
+            if (!isJumping)
             {
-                if (isLavaInView(nextLava))
+                GameObject? nextLava = getLavaGrids();
+                if (nextLava != null)
                 {
-                    isJumping = true;
-                    jumpCalled = true;
-                    StartCoroutine(delayedJump());
+                    if (isLavaInView(nextLava))
+                    {
+                        isJumping = true;
+                        jumpCalled = true;
+
+                        correct.SetActive(true);
+                        SFXController.instance.Correct();
+
+                        StartCoroutine(delayedJump());
+
+                    }
                 }
-            }
             }
         }
 
@@ -203,20 +229,20 @@ namespace Car
         {
             _speed = newSpeed;
         }
-        
 
-        public Vector3 GetPosition() 
+
+        public Vector3 GetPosition()
         {
 
-                return transform.position;
+            return transform.position;
 
         }
-        
+
         public void LoadPlayerData(PlayerDTO data)
         {
-            playerData = new PlayerDTO(data.Name,data.Surname,data.Id,data.Coins,data.BestScore,data.UnlockedCars, data.SelectedCar);
+            playerData = new PlayerDTO(data.Name, data.Surname, data.Id, data.Coins, data.BestScore, data.UnlockedCars, data.SelectedCar);
         }
-        
+
 
         IEnumerator DelayedFlipReaction()
         {
@@ -228,14 +254,14 @@ namespace Car
             {
                 isFlipped = false;
             }
-            
+
             if (isFlipped)
             {
                 GameManager.instance.GameOver();
             }
 
         }
-        
+
         IEnumerator StartDetectionAfterDelay()
         {
             yield return new WaitForSeconds(delayBeforeStart);
@@ -252,15 +278,15 @@ namespace Car
 
                 foreach (var lava in lavaGrids)
                 {
-                    if(nextLava.transform.position.x-_carRB.transform.position.x+350f < 0)
+                    if (nextLava.transform.position.x - _carRB.transform.position.x + 350f < 0)
                         nextLava = lava;
                     else
-                    if(lava.transform.position.x-_carRB.transform.position.x+350f > 0 && (lava.transform.position.x-_carRB.transform.position.x < nextLava.transform.position.x-_carRB.transform.position.x))
+                    if (lava.transform.position.x - _carRB.transform.position.x + 350f > 0 && (lava.transform.position.x - _carRB.transform.position.x < nextLava.transform.position.x - _carRB.transform.position.x))
                         nextLava = lava;
                 }
 
                 return nextLava;
-                
+
             }
 
             return null;
@@ -285,9 +311,13 @@ namespace Car
 
         private IEnumerator delayedJump()
         {
-                yield return new WaitWhile(() => jumpCalled);
-                _carRB.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
-                isJumping = false;
+            yield return new WaitWhile(() => jumpCalled);
+            _carRB.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
+            SFXController.instance.JumpSound();
+            correct.SetActive(false);
+            jumpWarning.SetActive(false);
+
+            isJumping = false;
         }
     }
 }

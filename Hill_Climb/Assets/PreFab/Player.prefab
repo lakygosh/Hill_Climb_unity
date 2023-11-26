@@ -81,6 +81,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9e5a578f-7486-4dfa-a182-bc7b3a7397eb
     m_ActionName: Car/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cc3b0786-b9b8-4eb2-8161-e4b96fa8765e
+    m_ActionName: Car/Jump[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Player1
   m_DefaultActionMap: Car
@@ -104,6 +108,7 @@ MonoBehaviour:
   _carRB: {fileID: 2345287996989664633, guid: 8e40c2b210b7d00438bbe8d023fa5ce1, type: 3}
   _speed: 267.5
   _rotationSpeed: 300
+  sfxController: {fileID: 1745928987406451106, guid: 41fc916b9539c774391492ec8fd091e5, type: 3}
 --- !u!114 &-1208594251957881680
 MonoBehaviour:
   m_ObjectHideFlags: 0

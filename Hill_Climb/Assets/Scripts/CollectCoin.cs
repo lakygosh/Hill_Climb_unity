@@ -18,6 +18,7 @@ public class CollectCoin : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Coin"))
         {
+            SFXController.instance.CoinCollect();
             if (!GameManager.IsGameOver)
             {
                 CoinController.instance.AddCoins();

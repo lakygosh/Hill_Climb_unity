@@ -37,9 +37,10 @@ public class GameManager : MonoBehaviour
         TextMeshProUGUI score = _gameOverCanvas.GetComponentInChildren<TextMeshProUGUI>();
         ScoreController.instance.saveScore(ref score);
         _gameOverCanvas.SetActive(true);
+        SFXController.instance.GameOver();
         //Time.timeScale = 0f; if we want to stop the game
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {

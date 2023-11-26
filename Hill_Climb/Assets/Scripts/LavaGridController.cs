@@ -6,15 +6,17 @@ public class LavaGridController : MonoBehaviour
 {
     [SerializeField] internal Transform _lava;
     private Transform _tempLava;
-    internal GameManager gameManager;
+   // internal GameManager gameManager;
     private int _count;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Lava"))
         {
-            if (!GameManager.IsGameOver)
+            SFXController.instance.WaterSplash();
+
+            if (GameManager.IsGameOver)
             {
-                gameManager.GameOver();
+                GameManager.instance.GameOver();
             }
             
         }

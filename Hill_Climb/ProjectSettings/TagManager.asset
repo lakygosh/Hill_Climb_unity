@@ -11,6 +11,8 @@ TagManager:
   - Lava
   - VCam
   - LavaGO
+  - JumpWarning
+  - Correct
   layers:
   - Default
   - TransparentFX
