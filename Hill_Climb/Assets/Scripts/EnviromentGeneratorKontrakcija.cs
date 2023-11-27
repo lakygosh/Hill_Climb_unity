@@ -20,7 +20,7 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
 
     private int _levelLength = 2;
     private float _xMultiplier = 21f;
-    [SerializeField, Range(1f, 50f)] private float _yMultiplier = 2f;
+    [SerializeField, Range(1f, 50f)] private float _yMultiplier = 2.1f;
     [SerializeField, Range(0f, 1f)] private float _curveSmoothness = 0.5f;
 
     [SerializeField] private float _noiseStep = 0.5f;

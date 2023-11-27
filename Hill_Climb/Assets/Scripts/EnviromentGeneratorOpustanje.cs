@@ -17,7 +17,7 @@ public class EnviromentGeneratorOpustanje : MonoBehaviour
     private Player _player;
 
     private int _levelLength = 15;
-    [SerializeField, Range(1f, 50f)] private float _xMultiplier = 2f;
+    [SerializeField, Range(1f, 50f)] private float _xMultiplier = 2.1f;
     [SerializeField, Range(1f, 50f)] private float _yMultiplier = 2f;
     [SerializeField, Range(0f, 1f)] private float _curveSmoothness = 0.5f;
 
@@ -68,7 +68,7 @@ public class EnviromentGeneratorOpustanje : MonoBehaviour
             if (Vector3.Distance(_lastLvlFragmentPos, _player.GetPosition()) < CAR_DISTANCE_SPAWN_MAP)
             {
                 MapRender();
-        }
+            }
     }
 
     private void MapRender()
