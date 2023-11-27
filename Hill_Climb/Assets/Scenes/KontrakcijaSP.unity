@@ -702,6 +702,7 @@ GameObject:
   - component: {fileID: 450759400}
   - component: {fileID: 450759399}
   - component: {fileID: 450759404}
+  - component: {fileID: 450759405}
   m_Layer: 5
   m_Name: HUDCANVAS
   m_TagString: Untagged
@@ -844,6 +845,21 @@ MonoBehaviour:
   correct: {fileID: 8300000, guid: 27d13e2dbabe48647bb456083ab7ca47, type: 3}
   waterSplash: {fileID: 8300000, guid: 1577d43e18e1b8a4483d792040998ed8, type: 3}
   carUnlockSound: {fileID: 8300000, guid: 735f4255eae409e4d89e0e7685801534, type: 3}
+  gameOver: {fileID: 0}
+  cecaLGM: {fileID: 0}
+--- !u!114 &450759405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450759398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e082a29764e7e4dbff949282754c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,7 +2387,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
       m_CornerMode: 1
-    - position: {x: 3.8999996, y: -0.082922935, z: -15}
+    - position: {x: 3.8999996, y: 0.055477083, z: -15}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -2412,13 +2428,13 @@ MonoBehaviour:
   m_Creator: {fileID: 0}
   m_Modifiers: []
   m_ColliderSegment:
-  - {x: -17.098099, y: 0.35789198}
-  - {x: 3.9019003, y: 0.04442288}
-  - {x: 3.8999994, y: -2.5425384}
+  - {x: -17.09894, y: 0.35790175}
+  - {x: 3.9010606, y: 0.18283267}
+  - {x: 3.8999999, y: -8.84741}
   - {x: 3.8999996, y: -50.7}
   - {x: -17.1, y: -50.7}
   - {x: -17.1, y: -0.41834664}
-  - {x: -17.098099, y: 0.35789198}
+  - {x: -17.09894, y: 0.35790175}
 --- !u!1971053207 &1230123196
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -2475,8 +2491,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -6.6000004, y: -25.15474, z: 0}
-    m_Extent: {x: 10.502388, y: 25.545269, z: 0}
+    m_Center: {x: -6.6000004, y: -25.154734, z: 0}
+    m_Extent: {x: 10.501333, y: 25.545275, z: 0}
   m_SpriteSortPoint: 0
 --- !u!4 &1230123197
 Transform:
@@ -2509,7 +2525,7 @@ MonoBehaviour:
   _lavaController: {fileID: 4952064491546888217, guid: b11da3c471846bf4081b4d4c5807b849, type: 3}
   _yMultiplier: 2
   _curveSmoothness: 0.5
-  _noiseStep: 0.73632914
+  _noiseStep: 0.8676983
 --- !u!68 &1230123199
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2545,13 +2561,13 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -17.098099, y: 0.35789198}
-  - {x: 3.9019003, y: 0.04442288}
-  - {x: 3.8999994, y: -2.5425384}
+  - {x: -17.09894, y: 0.35790175}
+  - {x: 3.9010606, y: 0.18283267}
+  - {x: 3.8999999, y: -8.84741}
   - {x: 3.8999996, y: -50.7}
   - {x: -17.1, y: -50.7}
   - {x: -17.1, y: -0.41834664}
-  - {x: -17.098099, y: 0.35789198}
+  - {x: -17.09894, y: 0.35790175}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -3968,6 +3984,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2252348c18ba20438eb0bcea538bd19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &8800559517546670338
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 159579031361342581, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 560.22345
+      objectReference: {fileID: 0}
+    - target: {fileID: 159579031361342581, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 156.36183
+      objectReference: {fileID: 0}
+    - target: {fileID: 159579031361342581, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.4872959
+      objectReference: {fileID: 0}
+    - target: {fileID: 159579031361342581, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 159579031361342581, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 159579031361342581, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 159579031361342581, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 159579031361342581, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 159579031361342581, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 159579031361342581, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442847129630798596, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
+      propertyPath: m_Name
+      value: SpecialAudioSource
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 138a43baad8c6d84eae798c71e95a2e3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3983,3 +4056,4 @@ SceneRoots:
   - {fileID: 1857584256}
   - {fileID: 2138517252}
   - {fileID: 1441648638}
+  - {fileID: 8800559517546670338}

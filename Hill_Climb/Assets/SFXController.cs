@@ -7,7 +7,7 @@ public class SFXController : MonoBehaviour
 {
     public static SFXController instance = new SFXController();
     public AudioSource src;
-    public AudioClip positiveButtonClik, negativeButtonClick, coinCollect, fuelCollect, jumpNotification, jumpSound, correct, waterSplash, carUnlockSound, gameOver;
+    public AudioClip positiveButtonClik, negativeButtonClick, coinCollect, fuelCollect, jumpNotification, jumpSound, correct, waterSplash, carUnlockSound, gameOver, cecaLGM;
 
 
     private void Awake()
@@ -65,6 +65,11 @@ public class SFXController : MonoBehaviour
     public void GameOver()
     {
         src.clip = gameOver;
+        src.Play();
+    }
+    public void CecaLGM()
+    {
+        src.clip = cecaLGM;
         src.Play();
     }
 }

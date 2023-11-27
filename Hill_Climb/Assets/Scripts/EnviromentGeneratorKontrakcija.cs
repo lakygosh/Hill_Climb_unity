@@ -140,7 +140,7 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
 
     private void MapRender()
     {
-        //_yMultiplier = _yMultiplier + 0.5f;
+        _yMultiplier = _yMultiplier + 0.5f;
         _noiseStep = Random.value;
         int j = 0;
         while (j < _levelLength)

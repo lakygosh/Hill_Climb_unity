@@ -156,3 +156,4 @@ MonoBehaviour:
   waterSplash: {fileID: 8300000, guid: 1577d43e18e1b8a4483d792040998ed8, type: 3}
   carUnlockSound: {fileID: 8300000, guid: 735f4255eae409e4d89e0e7685801534, type: 3}
   gameOver: {fileID: 8300000, guid: 589bd9d8a224ee74a91c0801126bd7fb, type: 3}
+  cecaLGM: {fileID: 8300000, guid: 0924c33489543c9439890f8062ee93e8, type: 3}
