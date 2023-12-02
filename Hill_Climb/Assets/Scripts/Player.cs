@@ -25,7 +25,7 @@ namespace Car
         [SerializeField] private Rigidbody2D _backTireRB;
         [SerializeField] private Rigidbody2D _carRB;
 
-        [SerializeField] private float _speed = 5f;
+        private float _speed = 50f;
         [SerializeField] private float _rotationSpeed = 100f;
         private SFXController sfxController;
         private SpeedSlider _speedSlider;
@@ -163,19 +163,41 @@ namespace Car
             }
             else
             {
-                _frontTireRB.AddTorque(-_speed);
+                float currentSpeed = _carRB.velocity.magnitude; // Get the current speed
+
+                // Adjust the torque based on the difference between the current speed and the target speed
+                float speedDifference = _speed - currentSpeed - 20f;
+                if (speedDifference > 0)
+                {
+                    _frontTireRB.angularDrag = 0f;
+                    _backTireRB.angularDrag = 0f;
+                    _frontTireRB.AddTorque(-_speed*10f*Time.fixedDeltaTime);
+                    _backTireRB.AddTorque(-_speed*10f*Time.fixedDeltaTime);
                 //_backTireRB.AddTorque(-_speed);
                 //_carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime * (-5));
+                }
+                else
+                {
+                    _frontTireRB.angularDrag = 3f;
+                    _backTireRB.angularDrag = 3f;
+                }
             }
         }
 
         private void Drive()
         {
-            _frontTireRB.AddTorque(_moveInput * _speed * Time.fixedDeltaTime);
-            _backTireRB.AddTorque(_moveInput * _speed * Time.fixedDeltaTime);
-            _carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime * (-5));
-            _frontTireRB.angularDrag = 0f;
-            _backTireRB.angularDrag = 0f;
+            float currentSpeed = _carRB.velocity.magnitude; // Get the current speed
+
+            // Adjust the torque based on the difference between the current speed and the target speed
+            float speedDifference = _speed - currentSpeed;
+            if (speedDifference > 0)
+            {
+                _frontTireRB.AddTorque(_moveInput * _speed * 10f * Time.fixedDeltaTime);
+                _backTireRB.AddTorque(_moveInput * _speed * 10f * Time.fixedDeltaTime);
+                _carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime * (-5));
+                _frontTireRB.angularDrag = 0f;
+                _backTireRB.angularDrag = 0f;
+            }
         }
 
         private void Break()
@@ -205,7 +227,8 @@ namespace Car
 
         public void Jump()
         {
-            if (!isJumping)
+            if ((_backTireRB.IsTouching(GameObject.FindGameObjectWithTag("Ground").GetComponent<Collider2D>())
+                 || _frontTireRB.IsTouching(GameObject.FindGameObjectWithTag("Ground").GetComponent<Collider2D>())) && !isJumping)
             {
                 GameObject? nextLava = getLavaGrids();
                 if (nextLava != null)
@@ -303,7 +326,7 @@ namespace Car
                 case 1:
                     return viewportPoint.x >= 0 && viewportPoint.x <= 0.8 && viewportPoint.y >= 0 && viewportPoint.y <= 1;
                 case 2:
-                    return viewportPoint.x >= 0 && viewportPoint.x <= 0.65 && viewportPoint.y >= 0 && viewportPoint.y <= 1;
+                    return viewportPoint.x >= 0 && viewportPoint.x <= 0.7 && viewportPoint.y >= 0 && viewportPoint.y <= 1;
                 default:
                     return viewportPoint.x >= 0 && viewportPoint.x <= 1 && viewportPoint.y >= 0 && viewportPoint.y <= 1;
             }
