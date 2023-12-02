@@ -23,12 +23,13 @@ namespace Car
         [SerializeField] private Transform carTransform;
         [SerializeField] private Rigidbody2D _frontTireRB;
         [SerializeField] private Rigidbody2D _backTireRB;
+        private Rigidbody2D _chasisRB;
         [SerializeField] private Rigidbody2D _carRB;
 
         private float _speed = 50f;
+        public static float _speedLimiter = 1f;
         [SerializeField] private float _rotationSpeed = 100f;
         private SFXController sfxController;
-        private SpeedSlider _speedSlider;
         private float _moveInput;
 
         private float delayBeforeStart = 2f;
@@ -60,7 +61,8 @@ namespace Car
         private void Awake()
         {
             _virtualCamera = GameObject.FindGameObjectWithTag("VCam").GetComponent<CinemachineVirtualCamera>();
-
+            _chasisRB = GameObject.Find("Chasis").GetComponent<Rigidbody2D>();
+            Debug.Log(_chasisRB);
         }
 
         private void Start()
@@ -123,7 +125,7 @@ namespace Car
                     _carRB.constraints = RigidbodyConstraints2D.None;
                 }
                 if (!isFlipped && Vector3.Dot(transform.up, Vector3.up) < flipThreshold &&
-                    playerGroundRay.distance < 1.5f)
+                    GameObject.Find("Chasis").GetComponent<Collider2D>().IsTouching(GameObject.FindGameObjectWithTag("Ground").GetComponent<Collider2D>()))
                 {
                     //Start the coroutine if the car is flipped
                     StartCoroutine(DelayedFlipReaction());
@@ -166,15 +168,13 @@ namespace Car
                 float currentSpeed = _carRB.velocity.magnitude; // Get the current speed
 
                 // Adjust the torque based on the difference between the current speed and the target speed
-                float speedDifference = _speed - currentSpeed - 20f;
+                float speedDifference = _speed - currentSpeed - 20f - _speedLimiter;
                 if (speedDifference > 0)
                 {
                     _frontTireRB.angularDrag = 0f;
                     _backTireRB.angularDrag = 0f;
                     _frontTireRB.AddTorque(-_speed*10f*Time.fixedDeltaTime);
                     _backTireRB.AddTorque(-_speed*10f*Time.fixedDeltaTime);
-                //_backTireRB.AddTorque(-_speed);
-                //_carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime * (-5));
                 }
                 else
                 {
@@ -189,7 +189,7 @@ namespace Car
             float currentSpeed = _carRB.velocity.magnitude; // Get the current speed
 
             // Adjust the torque based on the difference between the current speed and the target speed
-            float speedDifference = _speed - currentSpeed;
+            float speedDifference = _speed - currentSpeed - _speedLimiter;
             if (speedDifference > 0)
             {
                 _frontTireRB.AddTorque(_moveInput * _speed * 10f * Time.fixedDeltaTime);
