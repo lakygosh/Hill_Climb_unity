@@ -103,7 +103,7 @@ namespace Car
                     jumpCalled = false;
                 }
 
-                if (isLavaInView(nextLava))
+                if (nextLava != null && isLavaInView(nextLava))
                 {
                     jumpWarning.SetActive(true);
                     //SFXController.instance.JumpNotification();
@@ -111,6 +111,14 @@ namespace Car
                 else
                 { 
                     jumpWarning.SetActive(false);
+                }
+
+                if (carTransform.position.y < -25f)
+                {
+                    _virtualCamera.Follow = null;
+                    _virtualCamera.LookAt = null;
+                    GameManager.instance.GameOver();
+
                 }
             }
         }
@@ -140,13 +148,7 @@ namespace Car
                 
             }
 
-            if (carTransform.position.y < -25f)
-            {
-                _virtualCamera.Follow = null;
-                _virtualCamera.LookAt = null;
-                GameManager.instance.GameOver();
-
-            }
+           
 
         }
 

@@ -21,9 +21,13 @@ public class PlayAudioOnKeyPress : MonoBehaviour
     void Update()
     {
         // Check if the "C" key is pressed
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && audioSource.isPlaying)
         {
             // Play the audio clip
+            audioSource.Stop();
+        }
+        else if (Input.GetKeyDown(KeyCode.C)  && !audioSource.isPlaying) 
+        {
             audioSource.Play();
         }
     }
