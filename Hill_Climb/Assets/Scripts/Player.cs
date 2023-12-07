@@ -88,12 +88,6 @@ namespace Car
             if (!GameManager.IsGameOver)
             {
                 Movement();
-                /*if (Speedometer.speed < 10)
-                {
-                    _frontTireRB.AddTorque(-_speed);
-                    //_backTireRB.AddTorque(-_speed);
-                    //_carRB.AddTorque(_moveInput * _rotationSpeed * Time.fixedDeltaTime * (-5));
-                }*/
 
                 GameObject? nextLava = getLavaGrids();
                 if (nextLava != null && nextLava.transform.position.x - _carRB.transform.position.x + 350f < 10 &&
