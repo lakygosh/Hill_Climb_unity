@@ -37,10 +37,6 @@ public class CollectFuel : MonoBehaviour
     void Start()
     {
         _player = PlayerSpawner.spawnedObject.GetComponent<Player>();
-        float terrainHeight = GetTerrainHeightAtPosition(_lastFuelPosition.x);
-
-        // Calculate the coin's initial position above the terrain
-        _lastFuelPosition.y = terrainHeight + _yOffset;
     }
 
     // Update is called once per frame

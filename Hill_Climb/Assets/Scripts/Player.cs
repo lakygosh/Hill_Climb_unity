@@ -18,7 +18,6 @@ namespace Car
     public class Player : MonoBehaviour
     {
         public PlayerDTO playerData;
-        //private Rigidbody2D rb;
         public static Player instance;
         [SerializeField] private Transform carTransform;
         [SerializeField] private Rigidbody2D _frontTireRB;
@@ -51,7 +50,6 @@ namespace Car
 
 
         private CinemachineVirtualCamera _virtualCamera;
-        //public static Speedometer speedometar = new Speedometer();
 
         public void Move(InputAction.CallbackContext context)
         {
@@ -76,11 +74,8 @@ namespace Car
 
             correct.SetActive(false);
             jumpWarning.SetActive(false);
-            //rb = GetComponent<Rigidbody2D>();
             instance = PlayerManager.GetSelectedPlayer();
             StartCoroutine(StartDetectionAfterDelay());
-
-            //_speed = _speedSlider.GetSpeed(); //slajder !!!!
         }
 
         private void FixedUpdate()
@@ -100,7 +95,6 @@ namespace Car
                 if (nextLava != null && isLavaInView(nextLava))
                 {
                     jumpWarning.SetActive(true);
-                    //SFXController.instance.JumpNotification();
                 }
                 else
                 { 

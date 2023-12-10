@@ -36,28 +36,10 @@ public class CollectCoin : MonoBehaviour
         _lastCoinPosition = transform.position;
     }
 
-    private void OnValidate()
-    {
-        //// Get the terrain height at the X position of the coin
-        //float terrainHeight = GetTerrainHeightAtPosition(transform.position.x);
-
-        //// Calculate the coin's position above the terrain
-        //Vector3 coinPosition = transform.position;
-        //coinPosition.y = terrainHeight + _yOffset;
-
-
-        //transform.position = coinPosition;
-        //_lastCoinPosition = transform.position;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
         player = PlayerSpawner.spawnedObject.GetComponent<Player>();
-        float terrainHeight = GetTerrainHeightAtPosition(_lastCoinPosition.x);
-
-        // Calculate the coin's initial position above the terrain
-        _lastCoinPosition.y = terrainHeight + _yOffset;
     }
 
     // Update is called once per frame
@@ -69,15 +51,9 @@ public class CollectCoin : MonoBehaviour
             float terrainHeight = GetTerrainHeightAtPosition(_lastCoinPosition.x + 100f);
 
             // Calculate the coin's position above the terrain
-
             _lastCoinPosition.y = terrainHeight + _yOffset;
             _lastCoinPosition.x += 100f;
 
-            // Set the new coin position
-            //transform.position = coinPosition;
-
-
-            //_lastCoinPosition = CoinGenerator(_lastCoinPosition + Vector3.right * 600f);
             CoinGenerator(_lastCoinPosition);
         }
 		

@@ -15,7 +15,6 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
 
     [SerializeField] private SpriteShapeController _spriteShapeController;
     private Player _player;
-    //[SerializeField] private LavaGridController _lavaController;
     [SerializeField] private LavaGridController _lavaController;
 
     private int _levelLength = 2;
@@ -44,7 +43,7 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
         //_xMultiplier = Random.Range(20, 22) + Random.value * Random.Range(22, 30);
         //_yMultiplier = Random.Range(10, 12) + Random.value * Random.Range(15, 22);
         _noiseStep = Random.value;
-        _spriteShapeController.spline.Clear();
+       // _spriteShapeController.spline.Clear();
 
         for (i = 0; i < _levelLength; i++)
         {
@@ -100,13 +99,6 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
                 _spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (100f * _curveSmoothness));
                 _spriteShapeController.spline.SetRightTangent(i, Vector3.right * (100f * _curveSmoothness));
 
-
-
-                //_spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos);
-
-                //_spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
-                //_spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (_xMultiplier * _curveSmoothness));
-                //_spriteShapeController.spline.SetRightTangent(i, Vector3.right * (_xMultiplier * _curveSmoothness));
                 _lavaController.LavaGenerator(new Vector3(_lastLvlFragmentPos.x - 380f, _lastLvlFragmentPos.y + 50f, 0));
 
                 _lastLvlFragmentPos.y = _currentheight;
@@ -114,12 +106,6 @@ public class EnviromentGeneratorKontrakcija : MonoBehaviour
             }
             else
             {
-                //_spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos);
-
-                //_spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
-                //_spriteShapeController.spline.SetLeftTangent(i, Vector3.left * (60f * _curveSmoothness));
-                //_spriteShapeController.spline.SetRightTangent(i, Vector3.right * (60f * _curveSmoothness));
-
                 _spriteShapeController.spline.InsertPointAt(i, _lastLvlFragmentPos);
 
                 _spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
