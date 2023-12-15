@@ -30,7 +30,7 @@ public class CollectFuel : MonoBehaviour
         {
             instance = this;
         }
-
+        _lastFuelPosition = transform.position;
     }
 
     // Start is called before the first frame update
@@ -42,22 +42,20 @@ public class CollectFuel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(_lastFuelPosition, _player.transform.position) <= 40f)
+        if (!(GetTerrainHeightAtPosition(_lastFuelPosition.x + 200f) == -1f))
         {
-            // Get the terrain height at the X position of the coin
-            float terrainHeight = GetTerrainHeightAtPosition(_lastFuelPosition.x + 150f);
+            if (Vector3.Distance(_lastFuelPosition, _player.transform.position) <= 40f)
+            {
+                // Get the terrain height at the X position of the coin
+                float terrainHeight = GetTerrainHeightAtPosition(_lastFuelPosition.x + 200f);
 
-            // Calculate the coin's position above the terrain
+                // Calculate the coin's position above the terrain
 
-            _lastFuelPosition.y = terrainHeight + _yOffset;
-            _lastFuelPosition.x += 150f;
+                _lastFuelPosition.y = terrainHeight + _yOffset;
+                _lastFuelPosition.x += 200f;
 
-            // Set the new coin position
-            //transform.position = coinPosition;
-
-
-            //_lastCoinPosition = CoinGenerator(_lastCoinPosition + Vector3.right * 600f);
-            FuelGenerator(_lastFuelPosition);
+                FuelGenerator(_lastFuelPosition);
+            }
         }
     }
 
@@ -80,7 +78,7 @@ public class CollectFuel : MonoBehaviour
         else
         {
             // Fallback value if the raycast doesn't hit 
-            return 0f;
+            return -1f;
         }
     }
 }

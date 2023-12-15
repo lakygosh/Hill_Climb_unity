@@ -27,6 +27,7 @@ public class Parallax : MonoBehaviour
 
         //speed = (float)Math.Log10(SpeedCalculator.instance.speed);
         speed = SpeedCalculator.instance.speed / 100f;
+        //speed = 0.2f;
 
         distance += Time.deltaTime * speed;
         material.SetTextureOffset("_MainTex", Vector2.right * distance);

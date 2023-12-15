@@ -1,5 +1,3 @@
-using Autodesk.Fbx;
-using Car;
 using UnityEngine;
 
 public class SpeedCalculator : MonoBehaviour

@@ -2,6 +2,8 @@ using Car;
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem.Controls;
+using Random = System.Random;
 
 public class CollectCoin : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class CollectCoin : MonoBehaviour
     private Vector3 _lastCoinPosition;
 
     private float _yOffset = 2f; // Offset from the terrain
+
+    private Random random = new Random();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -45,16 +49,28 @@ public class CollectCoin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(_lastCoinPosition, player.transform.position) <= 40f)
+        if (!(GetTerrainHeightAtPosition(_lastCoinPosition.x + 100f) == -1f))
         {
-            // Get the terrain height at the X position of the coin
-            float terrainHeight = GetTerrainHeightAtPosition(_lastCoinPosition.x + 100f);
+            if (Vector3.Distance(_lastCoinPosition, player.transform.position) <= 40f)
+            {
+                // Get the terrain height at the X position of the coin
+                float terrainHeight = GetTerrainHeightAtPosition(_lastCoinPosition.x + 100f);
 
-            // Calculate the coin's position above the terrain
-            _lastCoinPosition.y = terrainHeight + _yOffset;
-            _lastCoinPosition.x += 100f;
+                // Calculate the coin's position above the terrain
+                _lastCoinPosition.y = terrainHeight + _yOffset;
+                _lastCoinPosition.x += 100f;
+                CoinGenerator(_lastCoinPosition);
 
-            CoinGenerator(_lastCoinPosition);
+                int r = random.Next(1, 6);
+                for (int i = 0; i <= r; i++)
+                {
+                    terrainHeight = GetTerrainHeightAtPosition(_lastCoinPosition.x + 4f);
+                    _lastCoinPosition.y = terrainHeight + _yOffset;
+
+                    _lastCoinPosition.x += 4f;
+                    CoinGenerator(_lastCoinPosition);
+                }
+            }
         }
 		
     }
@@ -78,7 +94,7 @@ public class CollectCoin : MonoBehaviour
         else
         {
             // Fallback value if the raycast doesn't hit 
-            return 0f;
+            return -1f;
         }
     }
 }

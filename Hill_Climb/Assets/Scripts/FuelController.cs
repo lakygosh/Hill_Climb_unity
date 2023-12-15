@@ -33,7 +33,7 @@ public class FuelController : MonoBehaviour
 
     private void Update()
     {
-        //_currentFuelAmount -= Time.deltaTime * _fuelDrainSpeed;
+        _currentFuelAmount -= Time.deltaTime * _fuelDrainSpeed;
         UpdateUI();
     }
 
