@@ -46,15 +46,30 @@ public class CollectFuel : MonoBehaviour
         {
             if (Vector3.Distance(_lastFuelPosition, _player.transform.position) <= 40f)
             {
-                // Get the terrain height at the X position of the coin
-                float terrainHeight = GetTerrainHeightAtPosition(_lastFuelPosition.x + 200f);
+                if (GetTerrainHeightAtPosition(_lastFuelPosition.x + 200f) <= -1f)
+                {
+                    // Get the terrain height at the X position of the coin
+                    float terrainHeight = GetTerrainHeightAtPosition(_lastFuelPosition.x + 150f);
 
-                // Calculate the coin's position above the terrain
+                    // Calculate the coin's position above the terrain
 
-                _lastFuelPosition.y = terrainHeight + _yOffset;
-                _lastFuelPosition.x += 200f;
+                    _lastFuelPosition.y = terrainHeight + _yOffset;
+                    _lastFuelPosition.x += 150f;
 
-                FuelGenerator(_lastFuelPosition);
+                    FuelGenerator(_lastFuelPosition);
+                }
+                else
+                {
+                    // Get the terrain height at the X position of the coin
+                    float terrainHeight = GetTerrainHeightAtPosition(_lastFuelPosition.x + 200f);
+
+                    // Calculate the coin's position above the terrain
+
+                    _lastFuelPosition.y = terrainHeight + _yOffset;
+                    _lastFuelPosition.x += 200f;
+
+                    FuelGenerator(_lastFuelPosition);
+                }
             }
         }
     }

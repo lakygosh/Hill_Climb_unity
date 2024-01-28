@@ -51,7 +51,7 @@ public class CollectCoin : MonoBehaviour
     {
         if (!(GetTerrainHeightAtPosition(_lastCoinPosition.x + 100f) == -1f))
         {
-            if (Vector3.Distance(_lastCoinPosition, player.transform.position) <= 40f)
+            if (Vector3.Distance(_lastCoinPosition, player.transform.position) <= 90f)
             {
                 // Get the terrain height at the X position of the coin
                 float terrainHeight = GetTerrainHeightAtPosition(_lastCoinPosition.x + 100f);
