@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3701005844812280533}
   - component: {fileID: 4258628138334228689}
   - component: {fileID: 3319384980010070247}
+  - component: {fileID: 3864167382536305912}
   m_Layer: 3
   m_Name: SinglePlayerVehicle8
   m_TagString: Player
@@ -228,6 +229,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fuelCanister: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
+--- !u!114 &3864167382536305912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543082105864224710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a425a0e040d37e4c86753a896a74217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &5380972346623447630
 GameObject:
   m_ObjectHideFlags: 0

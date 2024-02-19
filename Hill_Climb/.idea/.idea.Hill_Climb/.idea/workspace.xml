@@ -6,22 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3431f26d-6e07-4d35-88e1-ed8774531c77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car10/SinglePlayerVehicle10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car10/SinglePlayerVehicle10.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car11/SinglePlayerVehicle11.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car11/SinglePlayerVehicle11.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car12/SinglePlayerVehicle12.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car12/SinglePlayerVehicle12.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car13/SinglePlayerVehicle13.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car13/SinglePlayerVehicle13.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car14/SinglePlayerVehicle14.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car14/SinglePlayerVehicle14.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car2/SinglePlayerVehicle2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car2/SinglePlayerVehicle2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car3/SinglePlayerVehicle3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car3/SinglePlayerVehicle3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car4/SinglePlayerVehicle4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car4/SinglePlayerVehicle4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car5/SinglePlayerVehicle5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car5/SinglePlayerVehicle5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car6/SinglePlayerVehicle6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car6/SinglePlayerVehicle6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car7/SinglePlayerVehicle7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car7/SinglePlayerVehicle7.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car8/SinglePlayerVehicle8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car8/SinglePlayerVehicle8.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car9/SinglePlayerVehicle9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car9/SinglePlayerVehicle9.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpeedCalculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpeedCalculator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpeedCalculator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpeedCalculator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Parallax.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parallax.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -353,7 +338,8 @@
       <workItem from="1706445677310" duration="596000" />
       <workItem from="1707138572807" duration="84000" />
       <workItem from="1707767393741" duration="2353000" />
-      <workItem from="1708333575814" duration="4143000" />
+      <workItem from="1708333575814" duration="4275000" />
+      <workItem from="1708338758099" duration="107000" />
     </task>
     <servers />
   </component>

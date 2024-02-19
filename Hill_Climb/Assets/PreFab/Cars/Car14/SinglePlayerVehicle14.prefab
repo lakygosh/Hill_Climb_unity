@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2217347556371534224}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.03, y: 10.74, z: 9.914837}
+  m_LocalPosition: {x: -17.300001, y: 12.210001, z: 9.914837}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -405,7 +405,7 @@ Transform:
   m_GameObject: {fileID: 3402619387889650391}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.97, y: 7.3, z: 8}
+  m_LocalPosition: {x: -22.24, y: 8.770001, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -581,7 +581,7 @@ Transform:
   m_GameObject: {fileID: 4415517952438766855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.74, y: 7.3, z: 8}
+  m_LocalPosition: {x: -11.01, y: 8.77, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -743,6 +743,7 @@ GameObject:
   - component: {fileID: 6485564139836989143}
   - component: {fileID: 5195795335457994522}
   - component: {fileID: -2068252937946712203}
+  - component: {fileID: -866226095911966966}
   m_Layer: 3
   m_Name: SinglePlayerVehicle14
   m_TagString: Player
@@ -760,7 +761,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 10, z: -15}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2426551739036738520}
@@ -810,7 +811,7 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -9.74, y: 7.299999}
+  m_Anchor: {x: -11.01, y: 8.77}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Suspension:
     m_DampingRatio: 0.35
@@ -835,7 +836,7 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -20.97, y: 7.299999}
+  m_Anchor: {x: -22.24, y: 8.77}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Suspension:
     m_DampingRatio: 0.35
@@ -955,3 +956,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fuelCanister: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
+--- !u!114 &-866226095911966966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8505931683509615321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a425a0e040d37e4c86753a896a74217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0

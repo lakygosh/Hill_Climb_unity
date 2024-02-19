@@ -680,6 +680,7 @@ GameObject:
   - component: {fileID: 7600284804599300394}
   - component: {fileID: 5679989686820487868}
   - component: {fileID: -3943426487363270106}
+  - component: {fileID: 4737496490821509553}
   m_Layer: 3
   m_Name: SinglePlayerVehicle15
   m_TagString: Player
@@ -697,7 +698,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 10, z: -15}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5505227359127736463}
@@ -798,7 +799,7 @@ MonoBehaviour:
   _frontTireRB: {fileID: 99512804193892211}
   _backTireRB: {fileID: 3086229153180284511}
   _carRB: {fileID: 7821785525938683277}
-  _speed: 300
+  _speed: 50
   _rotationSpeed: 300
 --- !u!114 &7600284804599300394
 MonoBehaviour:
@@ -892,3 +893,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fuelCanister: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
+--- !u!114 &4737496490821509553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382499072454824889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a425a0e040d37e4c86753a896a74217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
