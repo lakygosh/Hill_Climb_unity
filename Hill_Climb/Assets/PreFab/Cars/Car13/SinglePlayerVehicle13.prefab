@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3531630838935047417}
   - component: {fileID: 7657970105450549804}
   - component: {fileID: 648904777618394295}
+  - component: {fileID: 5070749030123784463}
+  - component: {fileID: 1766255564988617549}
   m_Layer: 3
   m_Name: FrontTire
   m_TagString: Player
@@ -148,6 +150,32 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.565
+--- !u!114 &5070749030123784463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672603443833218831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea77b1d0920d479468b0b7425f235189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coin: {fileID: 1535016885207513356, guid: fbcb401e439763845af5b95726dff239, type: 3}
+--- !u!114 &1766255564988617549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672603443833218831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc048526a27ff2c419f744071811bc56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fuelCanister: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
 --- !u!1 &2152877954881462132
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +310,7 @@ MonoBehaviour:
   _frontTireRB: {fileID: 7657970105450549804}
   _backTireRB: {fileID: 5970238937573785347}
   _carRB: {fileID: 4746376074256594324}
-  _speed: 500
+  _speed: 75
   _rotationSpeed: 300
 --- !u!114 &3457821179801244580
 MonoBehaviour:
@@ -889,6 +917,8 @@ GameObject:
   - component: {fileID: 5993402888207034101}
   - component: {fileID: 5970238937573785347}
   - component: {fileID: 5144510006892767436}
+  - component: {fileID: 3335393665320732248}
+  - component: {fileID: 8188046295864283636}
   m_Layer: 3
   m_Name: BackTire
   m_TagString: Player
@@ -1025,3 +1055,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.57
+--- !u!114 &3335393665320732248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7811756503671775541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea77b1d0920d479468b0b7425f235189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coin: {fileID: 1535016885207513356, guid: fbcb401e439763845af5b95726dff239, type: 3}
+--- !u!114 &8188046295864283636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7811756503671775541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc048526a27ff2c419f744071811bc56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fuelCanister: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}

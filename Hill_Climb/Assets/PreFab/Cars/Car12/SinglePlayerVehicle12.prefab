@@ -419,6 +419,8 @@ GameObject:
   - component: {fileID: 5423820467620835917}
   - component: {fileID: 8487261978812506722}
   - component: {fileID: 7006453267166300047}
+  - component: {fileID: 5666282314438687627}
+  - component: {fileID: 7229829083150495791}
   m_Layer: 3
   m_Name: FrontTire
   m_TagString: Player
@@ -555,6 +557,32 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.61
+--- !u!114 &5666282314438687627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3448904534847375471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea77b1d0920d479468b0b7425f235189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coin: {fileID: 0}
+--- !u!114 &7229829083150495791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3448904534847375471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc048526a27ff2c419f744071811bc56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fuelCanister: {fileID: 0}
 --- !u!1 &4482002858410721084
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +717,7 @@ MonoBehaviour:
   _frontTireRB: {fileID: 8487261978812506722}
   _backTireRB: {fileID: 8368728239643070820}
   _carRB: {fileID: 4611435746512205437}
-  _speed: 1000
+  _speed: 75
   _rotationSpeed: 300
 --- !u!114 &2901552162903077099
 MonoBehaviour:
@@ -795,6 +823,8 @@ GameObject:
   - component: {fileID: 6697654893603416061}
   - component: {fileID: 8368728239643070820}
   - component: {fileID: 8234382660203742762}
+  - component: {fileID: 8786415597376696083}
+  - component: {fileID: 8119487623109293412}
   m_Layer: 3
   m_Name: BackTire
   m_TagString: Player
@@ -931,3 +961,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.61
+--- !u!114 &8786415597376696083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8755291526405269857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea77b1d0920d479468b0b7425f235189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coin: {fileID: 0}
+--- !u!114 &8119487623109293412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8755291526405269857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc048526a27ff2c419f744071811bc56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fuelCanister: {fileID: 0}

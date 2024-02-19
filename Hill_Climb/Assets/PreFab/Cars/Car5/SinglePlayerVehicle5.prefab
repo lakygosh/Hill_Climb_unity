@@ -134,7 +134,7 @@ MonoBehaviour:
   _frontTireRB: {fileID: 129303980836699719}
   _backTireRB: {fileID: 561222839086138853}
   _carRB: {fileID: 7245317547014719773}
-  _speed: 600
+  _speed: 50
   _rotationSpeed: 300
 --- !u!114 &1068064465950564963
 MonoBehaviour:
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 2155576874885227895}
   - component: {fileID: 561222839086138853}
   m_Layer: 3
-  m_Name: backTire
+  m_Name: BackTire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 4090618626929079409}
   - component: {fileID: 129303980836699719}
   m_Layer: 3
-  m_Name: frontTire
+  m_Name: FrontTire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 3009936999579679489}
   - component: {fileID: 8520330405901846088}
   m_Layer: 3
-  m_Name: chasis
+  m_Name: Chasis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

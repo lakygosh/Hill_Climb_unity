@@ -6,14 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="3431f26d-6e07-4d35-88e1-ed8774531c77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hill_Climb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car1/SinglePlayerVehicle1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car1/SinglePlayerVehicle1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car10/SinglePlayerVehicle10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car10/SinglePlayerVehicle10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car11/SinglePlayerVehicle11.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car11/SinglePlayerVehicle11.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car12/SinglePlayerVehicle12.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car12/SinglePlayerVehicle12.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car13/SinglePlayerVehicle13.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car13/SinglePlayerVehicle13.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car14/SinglePlayerVehicle14.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car14/SinglePlayerVehicle14.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car2/SinglePlayerVehicle2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car2/SinglePlayerVehicle2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car3/SinglePlayerVehicle3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car3/SinglePlayerVehicle3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car4/SinglePlayerVehicle4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car4/SinglePlayerVehicle4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car5/SinglePlayerVehicle5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car5/SinglePlayerVehicle5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car6/SinglePlayerVehicle6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car6/SinglePlayerVehicle6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car7/SinglePlayerVehicle7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car7/SinglePlayerVehicle7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car8/SinglePlayerVehicle8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car8/SinglePlayerVehicle8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Cars/Car9/SinglePlayerVehicle9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Cars/Car9/SinglePlayerVehicle9.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpeedSlider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpeedSlider.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Speedometer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Speedometer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpeedCalculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpeedCalculator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpeedCalculator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpeedCalculator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,29 +76,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Gazi/FinalFeatures",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ground-coin-preplitanje-fix&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Gazi\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Gazi\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\Gazi\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Gazi\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Gazi\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Gazi\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../HillClimbGame\Hill_Climb.exe" />
@@ -337,6 +346,14 @@
       <workItem from="1699689951436" duration="5676000" />
       <workItem from="1700558853532" duration="7679000" />
       <workItem from="1701525432462" duration="5819000" />
+      <workItem from="1703615078767" duration="1155000" />
+      <workItem from="1703685174392" duration="160000" />
+      <workItem from="1706345075112" duration="372000" />
+      <workItem from="1706444191222" duration="625000" />
+      <workItem from="1706445677310" duration="596000" />
+      <workItem from="1707138572807" duration="84000" />
+      <workItem from="1707767393741" duration="2353000" />
+      <workItem from="1708333575814" duration="4143000" />
     </task>
     <servers />
   </component>

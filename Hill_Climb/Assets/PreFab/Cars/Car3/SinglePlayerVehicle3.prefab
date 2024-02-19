@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 9030099868478001199}
   - component: {fileID: 6643449390262503731}
   - component: {fileID: 8971595423692590243}
+  - component: {fileID: -7066535416281076003}
   m_Layer: 3
   m_Name: SinglePlayerVehicle3
   m_TagString: Player
@@ -33,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 10, z: -15}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8137827178396297676}
@@ -83,7 +84,7 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -3.65, y: 3}
+  m_Anchor: {x: -2.9299998, y: 2.0999997}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Suspension:
     m_DampingRatio: 0.35
@@ -108,7 +109,7 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -5.77, y: 3}
+  m_Anchor: {x: -5.05, y: 2.0999997}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Suspension:
     m_DampingRatio: 0.35
@@ -134,7 +135,7 @@ MonoBehaviour:
   _frontTireRB: {fileID: 2965928357904508612}
   _backTireRB: {fileID: 7370194367063744147}
   _carRB: {fileID: 8521080953488208244}
-  _speed: 450
+  _speed: 50
   _rotationSpeed: 300
 --- !u!114 &9030099868478001199
 MonoBehaviour:
@@ -228,6 +229,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fuelCanister: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
+--- !u!114 &-7066535416281076003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136961553755326846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a425a0e040d37e4c86753a896a74217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &1167326085649183837
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +255,7 @@ GameObject:
   - component: {fileID: 5464272373218578142}
   - component: {fileID: 2965928357904508612}
   m_Layer: 3
-  m_Name: frontTire
+  m_Name: FrontTire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,7 +270,7 @@ Transform:
   m_GameObject: {fileID: 1167326085649183837}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.65, y: 3, z: 8}
+  m_LocalPosition: {x: -2.9299998, y: 2.1, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -388,7 +402,7 @@ GameObject:
   - component: {fileID: 5665384097266219867}
   - component: {fileID: 7179857214721471849}
   m_Layer: 3
-  m_Name: chasis
+  m_Name: Chasis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,7 +417,7 @@ Transform:
   m_GameObject: {fileID: 7645124010784797964}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.59, y: 3.77, z: 9.914837}
+  m_LocalPosition: {x: -3.87, y: 2.91, z: 9.914837}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -537,7 +551,7 @@ GameObject:
   - component: {fileID: 541860975945615250}
   - component: {fileID: 7370194367063744147}
   m_Layer: 3
-  m_Name: backTire
+  m_Name: BackTire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,7 +566,7 @@ Transform:
   m_GameObject: {fileID: 8532352701295934462}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.77, y: 3, z: 8}
+  m_LocalPosition: {x: -5.0499997, y: 2.1, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

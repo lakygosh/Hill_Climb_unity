@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1206347662251605257}
   - component: {fileID: 4390700025244292467}
   m_Layer: 3
-  m_Name: chasis
+  m_Name: Chasis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,8 +192,8 @@ GameObject:
   - component: {fileID: 5373814307674130878}
   - component: {fileID: 7583855059785886829}
   m_Layer: 3
-  m_Name: frontTire
-  m_TagString: Untagged
+  m_Name: FrontTire
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,8 +340,8 @@ GameObject:
   - component: {fileID: 3014065535977554555}
   - component: {fileID: 6707624686234648342}
   m_Layer: 3
-  m_Name: backTire
-  m_TagString: Untagged
+  m_Name: BackTire
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -487,10 +487,11 @@ GameObject:
   - component: {fileID: 6245668949807593223}
   - component: {fileID: 7017757947425422733}
   - component: {fileID: 6445425364664798174}
-  - component: {fileID: 5625759170248938583}
+  - component: {fileID: 6219176129473086514}
   - component: {fileID: 2356976645964643251}
   - component: {fileID: 3256271363886299600}
   - component: {fileID: 5001738709883195359}
+  - component: {fileID: 2405679381796247654}
   m_Layer: 3
   m_Name: SinglePlayerVehicle2
   m_TagString: Player
@@ -593,7 +594,7 @@ WheelJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
---- !u!114 &5625759170248938583
+--- !u!114 &6219176129473086514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -609,7 +610,7 @@ MonoBehaviour:
   _frontTireRB: {fileID: 7583855059785886829}
   _backTireRB: {fileID: 3014065535977554555}
   _carRB: {fileID: 6245668949807593223}
-  _speed: 700
+  _speed: 40
   _rotationSpeed: 300
 --- !u!114 &2356976645964643251
 MonoBehaviour:
@@ -638,7 +639,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5625759170248938583}
+      - m_Target: {fileID: 6219176129473086514}
         m_TargetAssemblyTypeName: Car.Player, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -653,12 +654,24 @@ MonoBehaviour:
     m_ActionId: 3f272d45-c126-47fa-bde6-83cc9bcee66c
     m_ActionName: Car/Drive[/Mouse/leftButton,/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6543716113865988817}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 9e5a578f-7486-4dfa-a182-bc7b3a7397eb
     m_ActionName: Car/Pause[/Keyboard/escape]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5625759170248938583}
+      - m_Target: {fileID: 6219176129473086514}
         m_TargetAssemblyTypeName: Car.Player, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 1
@@ -703,3 +716,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fuelCanister: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
+--- !u!114 &2405679381796247654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543716113865988817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a425a0e040d37e4c86753a896a74217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0

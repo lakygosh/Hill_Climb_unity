@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3707814742090202532}
   - component: {fileID: 4312635562185679255}
   - component: {fileID: 7898410529669340793}
+  - component: {fileID: 6652233923684443892}
   m_Layer: 3
   m_Name: SinglePlayerVehicle4
   m_TagString: Player
@@ -33,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 10, z: -15}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2972981081304153580}
@@ -83,7 +84,7 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -5.05, y: 4.0500007}
+  m_Anchor: {x: -3.42, y: 2.33}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Suspension:
     m_DampingRatio: 0.35
@@ -108,7 +109,7 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -7.45, y: 4.0500007}
+  m_Anchor: {x: -5.8199997, y: 2.33}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Suspension:
     m_DampingRatio: 0.35
@@ -134,7 +135,7 @@ MonoBehaviour:
   _frontTireRB: {fileID: 2857377312681189057}
   _backTireRB: {fileID: 834457905874571854}
   _carRB: {fileID: 3652892964659300446}
-  _speed: 150
+  _speed: 50
   _rotationSpeed: 300
 --- !u!114 &3707814742090202532
 MonoBehaviour:
@@ -214,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea77b1d0920d479468b0b7425f235189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coin: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
+  _coin: {fileID: 1535016885207513356, guid: fbcb401e439763845af5b95726dff239, type: 3}
 --- !u!114 &7898410529669340793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +228,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc048526a27ff2c419f744071811bc56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fuelCanister: {fileID: 0}
+  _fuelCanister: {fileID: 6547045428366178641, guid: 5e3a7d72ce6f2694d80c32ee92fa8c45, type: 3}
+--- !u!114 &6652233923684443892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376141705404920020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a425a0e040d37e4c86753a896a74217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &6648526220933040750
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +269,7 @@ Transform:
   m_GameObject: {fileID: 6648526220933040750}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.07353, y: 4.9452143, z: 9.914837}
+  m_LocalPosition: {x: -4.44353, y: 3.225214, z: 9.914837}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -408,7 +422,7 @@ Transform:
   m_GameObject: {fileID: 8058138447104733268}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.45, y: 4.05, z: 8}
+  m_LocalPosition: {x: -5.8199997, y: 2.33, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -556,7 +570,7 @@ Transform:
   m_GameObject: {fileID: 8494909657638366192}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.05, y: 4.05, z: 8}
+  m_LocalPosition: {x: -3.42, y: 2.33, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -738,7 +738,7 @@ MonoBehaviour:
   _frontTireRB: {fileID: 8728563499196106862}
   _backTireRB: {fileID: 6175041526605000156}
   _carRB: {fileID: 1156338834324854140}
-  _speed: 500
+  _speed: 50
   _rotationSpeed: 300
 --- !u!114 &5516798388164738806
 MonoBehaviour:

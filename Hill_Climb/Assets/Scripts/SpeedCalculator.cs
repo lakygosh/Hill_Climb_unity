@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpeedCalculator : MonoBehaviour
 {
@@ -19,8 +19,7 @@ public class SpeedCalculator : MonoBehaviour
         }
     }
 
-    void Update()
-    {
+    void Update() {
         // Calculate the displacement since the last frame
         Vector3 displacement = transform.position - previousPosition;
 
