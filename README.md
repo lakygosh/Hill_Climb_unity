@@ -1,6 +1,6 @@
-# Hill Climb – One-Button Physics Driving Game
+# Hill Climb – Biofeedback Rehabilitation Game
 
-A 2D physics-based hill-climb racer built in Unity. The whole game is played with one button, and player profiles, coins, unlocked cars and high scores are stored by a REST backend.
+A Unity rehabilitation game for children with cerebral palsy, controlled by a biofeedback muscle sensor. It turns repetitive physiotherapy exercises into an endless driving game, and it was used in physiotherapy sessions at 2 cerebral palsy clinics in Belgrade.
 
 ![Unity 2022.3](https://img.shields.io/badge/Unity-2022.3.8f1-000000?style=flat-square&logo=unity&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white)
@@ -14,7 +14,14 @@ A 2D physics-based hill-climb racer built in Unity. The whole game is played wit
 
 Hill Climb is a side-scrolling driving game in the style of *Hill Climb Racing*. The terrain is generated endlessly with Perlin noise and built from a Unity SpriteShape spline. The car is a 2D rigidbody chassis on two wheel rigidbodies, driven by applying torque to the wheels.
 
-There are two game modes, *Kontrakcija* ("contraction") and *Opuštanje* ("relaxation"), and every action is bound to a single input (left mouse click). Player profiles come from the XML store of a companion `Pendulum_v3FullApp` application; its user model includes diagnosis and range-of-motion progress fields. Together this suggests the game was made as a one-button exercise game for therapy or rehabilitation. It was a team project. The Unity client is in this repo, and the Java backend lives in [HillClimb_Server](https://github.com/AleksandarGazikalovic/HillClimb_Server).
+**Why it exists.** Existing therapy for children with cerebral palsy relied on old biofeedback devices whose only reward was a sound. In this game, electrodes on the patient's muscle feed a biofeedback device. When the muscle impulse passes a threshold, the device triggers the game's single input, and the car jumps an obstacle. The two game modes match the two kinds of exercise: *Kontrakcija* ("contraction") and *Opuštanje* ("relaxation").
+
+**Project.** Built in a team of two between February and December 2023 for 3F-Fit Fabricando Faber, working directly with clinics, doctors and the biofeedback device company:
+- I built the game and the controller software that reads muscle impulses and drives the game.
+- The game was deployed in physiotherapy sessions at 2 clinics in Belgrade. We trained the physiotherapists and tuned difficulty and mechanics based on feedback from patients and therapists.
+- Player profiles, including diagnosis and range-of-motion progress, come from the companion `Pendulum_v3FullApp` application.
+
+The Unity client is in this repo. The Java backend, built by my teammate, lives in [HillClimb_Server](https://github.com/AleksandarGazikalovic/HillClimb_Server).
 
 ## Gameplay
 
